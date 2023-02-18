@@ -1,0 +1,845 @@
+mv .work-config/.fzf.zsh ./
+mv .work-config/nvim .config
+cd .work-config
+brew bundle
+brew
+brew
+code .z*
+cd ~
+code
+mv .zprofile .config/zsh
+ls
+mv .nvm .config
+ls .config
+ls -a .config
+mv .nvm nvm
+cd .config
+mv .nvm nvm
+ls
+cd ~
+cd .work-config
+brew bundle
+cd ~/
+vim .config/zsh
+vim .config/zsh/prompt
+vim .
+cd .config
+ls
+ls nvim
+vim .
+nvim
+nvim
+lua
+cd ../
+cd ~
+lua
+brew install lua
+docker
+clear
+docker ps
+docker run hello-world
+docker ps
+docker run it ubuntu bash
+docker run -it ubuntu bash
+docker ps
+docker --help
+docker run --help
+dockerÂƒ€loginÂƒ€-u="manhrd+rdverde" -p="75V0R0GTYLDBPMT9TL82APK2WKL5CXZPKCA6GTD9B0J9P2GXOELZU4NIB5GM5BVK" quay.io/manhrd
+vim Notes
+vim Notes .
+cd Documents/Notes
+ls
+vi Docker\ Engine.md
+dockerÂƒ€loginÂƒ€-u="manhrd+rdverde" -p="75V0R0GTYLDBPMT9TL82APK2WKL5CXZPKCA6GTD9B0J9P2GXOELZU4NIB5GM5BVK" quay.io/manhrd
+docker login -u="manhrd+rdverde" -p="75V0R0GTYLDBPMT9TL82APK2WKL5CXZPKCA6GTD9B0J9P2GXOELZU4NIB5GM5BVK" quay.io/manhrd
+vim
+vim .config/nvim
+git clone --depth 1 https://github.com/wbthomason/packer.nvim\\
+ ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+vim
+vim .config/nvim
+vim
+vim .config/nvim
+vim test.md
+rm -rf test.md
+ls .config/zsh
+ls -a .config/zsh
+ls .zshenv
+cat .zshenv
+cat .zshrc
+rm -rf .zshrc
+ls -a
+cat .config/zsh/.zprofile
+cat .zshenv
+cat .config/zsh/.zprofile
+vim .zshenv
+fzf
+cat .fzf.zsh
+ls /usr/
+ls /usr/local
+ls /usr/local/bin
+ls /usr/local/
+ls /usr/local/lib
+ls /usr/local
+ls /usr/
+ls /usr/share
+ls /usr/share/zsh
+fzf
+ls /usr/local/opt
+ls
+ls /usr/local/
+ls /usr/local/bin
+cd ../
+ls
+cd sross
+cd ../
+ls Shared
+ls
+cd /usr/local
+ls
+sudo mkdir opt
+ls
+cat .fzf.zsh
+brew install fzf
+ /opt/homebrew/opt/fzf/install
+cat ~/.zshrc
+fzf
+ls /usr/local/opt/fzf
+ls /usr/local/opt
+ls /usr/local/opt/
+ls /usr/local
+ls /usr/local/bin
+ls /usr/local
+ls /usr/local/lib
+ls /usr/
+ls /usr/bin
+q
+\:q
+cat .zshrc
+cat .fzf.zsh
+ls /opt/
+ls /opt/homebrew
+nvim .config/fzf
+nvim .config/zsh
+vi
+vi omni-password
+cd Developer
+cd Remote
+ls
+git clone
+git clone git@github.com:MA-POC/developer-site-theme.git
+ls
+code developer-site-theme
+cd developer-site-theme
+git checkout -b api-pages-fix
+git add *
+git log
+git commit -m "changed api layout to span whole page"
+git log
+cd ../
+ls
+cd
+mv Remote/* ./
+mv Remote/ ./
+cd Developer
+mv Remote/* ./
+ls
+rm -rf baseof.html _styles_project.scss
+ls Remote
+rm -rf Remote
+csrutil
+csrutil STATUS
+csrutil status
+cd Developer
+ls
+cd developer-site-theme
+git status
+git status
+git
+git
+xcode-select --install
+jq
+git
+git status
+git branchs
+git branch
+git checkout main
+git pull
+git log
+cd ../
+ls
+git clone git@github.com:MA-POC/product-template-doc.git
+ls
+cd product-template-doc
+ls
+cd themes
+ls
+cd manh
+ls
+ls
+git status
+git branch
+git pull
+ls
+cd ../../
+ls
+ls -a
+cat .gitmodules
+hugo server
+hugo server
+hugo
+hugo version
+git submodule update
+ls themes/manh
+hugo server
+cd ../
+cd product-omni-doc
+hugo server
+cd ../
+git clone git@github.com:MA-POC/product-supplychain-doc.git
+cd product-supplychain-doc
+hugo server
+ls 
+cat Dockerfile
+docker run
+cat docker-compose.yaml
+cd themes/manh
+ls
+git pull
+git status
+git log
+ls -a
+git submodule add git@github.com:MA-POC/developer-site-theme.git themes/manh\
+
+cd ../../
+git submodule add git@github.com:MA-POC/developer-site-theme.git themes/manh\
+
+git  submodule update --init --force --recursive
+git  submodule update --init --force --recursive
+git submodule update --remote
+ls themes
+ls themes/manh
+ls themes/docsy
+cat .gitmodules
+git submodule update
+cd themes/manh
+ls
+git log
+cd .././/
+cd ../../
+git branch
+cd product-supplychain-doc
+git branch
+git fetch preview
+git switch preview
+git branch
+git pull
+git log
+ls themes/manh
+cd themes/manh
+git log -1 -p --submodule\
+
+git log
+cd ../../
+git log
+cd themes/manh
+ls
+git log
+git pull
+git branch
+ls
+git status
+git pull
+git checkout main
+ls
+git log
+git checkout 4b3382e
+git checkout main :q
+git status
+cat layouts/apis/baseof.html
+cd ../../
+git status
+git add themes/manh
+git commit
+cd themes/manh
+ls
+cd ../../
+ls
+git status
+git branch
+git checkout -b test-branch
+git push -u origin test-branch
+git push origin --delete test-branch
+git log
+git branch
+git checkout preview
+git log
+git branch -D test-branch
+git branch
+git push origin preview
+cd ../
+ls
+cd product-template-doc
+ls
+cd themes/manh/
+ls
+git log
+git pull
+ls
+history
+history +10
+ls
+cd ../../
+git checkout preview
+git branch
+cd themes/manh
+ls
+git pull
+git  submodule update --init --force --recursive
+ls
+git  submodule update --init --force --recursive
+ls
+cd ../
+ls docsy
+git submodule update
+cd manh
+ls
+git log
+git branch
+git checkout 4b3382e
+ls
+git log
+cd ../../
+git add themes/manh
+git commit -m "updated theme"
+git log
+git log --raw
+git push origin preview
+git push origin preview
+ls
+cd ../../
+cd Developer
+ls
+git clone git@github.com:MA-POC/developer-site-doc.git
+ls
+cd developer-site-doc
+ls
+ls themes/manh
+cd themes/manh
+git submodule update
+ls
+cd ../
+git submodule update
+cd ../
+git submodule update
+ls themes/docsy
+ls themes/manh
+## Pull all submodules\
+## NOTE -  that private repos may require ssh and your personal access token\
+\
+git  submodule update --init --force --recursive\
+
+## Pull all submodules\
+## NOTE -  that private repos may require ssh and your personal access token\
+\
+git  submodule update --init --force --recursive\
+
+cd themes
+ls manhj
+ls manh
+ls docsy
+git submodule update
+cd manh
+git checkout 4b3382e
+cd ../../
+git add themes/manh
+git commit -m "updated theme"
+ls
+git branch
+git checkout preview
+git log
+git log --raw
+ls themes/manh
+git log
+cd themes/manh
+ls
+git log
+git status
+cd ../../
+git branch
+git push origin preview
+git add themes/manh
+git commit -m "updated theme"
+git push origin preview
+cd ../../
+cd product-template-doc
+cd Developer
+cd product-template-doc
+git branch
+git status
+git push origin preview
+git push origin preview
+git push origin preview
+cd ../
+ls
+cd product-omni-doc
+git branch
+git checkout preview
+git branch
+git checkout preview
+git stash
+git checkout preview
+git status
+git branch -d submodule-shenanigans
+git branch -D submodule-shenanigans
+git branch -D redocly-research
+git pull
+git log
+hugo server
+git branch
+git checkout inventory-order-endpoints
+git checkout -b inventory-order-endpoints
+vim merge.sh
+cd Developer
+cd Developer
+ls
+cd product-omni-doc
+ls
+ls static/openAPI
+git status
+git ls
+git log
+ls
+ls public
+cat redoc-openAPI-customer.json
+clear
+cd static/openAPI
+ls
+code .
+jq '.paths' openAPI-order-29.11.0.json
+jq '.paths./api/order/search' openAPI-order-29.11.0.json
+jq '.paths.\/api\/order\/search' openAPI-order-29.11.0.json
+jq '.paths."/api/order/search"' openAPI-order-29.11.0.json
+jq '.paths."/api/order/search"' openAPI-order-29.11.0.json
+jq '."paths./api/order/search"' openAPI-order-29.11.0.json
+jq -r '.paths."/api/order/search"' openAPI-order-29.11.0.json
+man jq
+man jq -r
+vim ~/.config/zsh/prompt
+code ~/.config/zsh/prompt
+source ~/.config/zsh/.zshrc
+clear
+clear
+jq -r '.paths."/api/order/search"' openAPI-order-29.11.0.json
+jq -r '".paths./api/order/search"' openAPI-order-29.11.0.json
+jq '".paths./api/order/search"' openAPI-order-29.11.0.json
+jq '".paths./api/order/search"' openAPI-order-29.11.0.json
+jq '".paths./api/order/search"' openAPI-order-29.11.0.json
+jq '.paths' openAPI-order-29.11.0.json
+jq '.paths' openAPI-order-29.11.0.json | jq '."/api/order/order/search"\
+,
+jq '.paths' openAPI-order-29.11.0.json | jq '."/api/order/order/search"'
+jq '".paths./api/order/search"' openAPI-order-29.11.0.json
+jq '.paths."/api/order/search"' openAPI-order-29.11.0.json
+jq -r '.paths."/api/order/search"' openAPI-order-29.11.0.json
+jq '.paths' openAPI-order-29.11.0.json | jq '."/api/order/order/search"'
+jq '.paths.["/api/order/search"]' openAPI-order-29.11.0.json
+jq '[.paths."/api/order/search"]' openAPI-order-29.11.0.json
+jq '.[paths."/api/order/search"]' openAPI-order-29.11.0.json
+jq '.[paths." /api/order/order/search"]' openAPI-order-29.11.0.json
+jq '.[paths."/api/order/order/search"]' openAPI-order-29.11.0.json
+jq '.paths."/api/order/order/search"' openAPI-order-29.11.0.json
+jq '.paths."/api/order/order/search"' openAPI-order-29.11.0.json
+jq '.paths."/api/order/order/search"' openAPI-order-29.11.0.json
+cd ../../
+cd ../
+code product-omni-doc
+history
+nvm
+node
+wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+cd .config
+ls -a
+cd ../
+ls -a
+rm -rf .zshrc
+cat .zshenv
+ls .config/zsh/.zprofile
+cat .config/zsh/.zprofile
+mv .config/zsh/.zprofile ./
+cat .zshenv
+cat .zsh_history >> .zprofile
+vim .zprofile
+cat .zshenv>> .zprofile
+cat .zprofile
+vim .zprofile
+ls -a
+mv .zshenv .config/zsh
+nvm
+node
+npm list --global
+npm install -g ts-node
+ls Documents
+cd Documents
+open R\&D\ New\ Hire\ Onboarding\ training\ plan\ Jan\ 2023\ -\ CAMPUS.pdf
+../
+open Documents
+code Developer/product-omni-doc
+echo "$ZDOTDIR"
+vim .config/zsh/zshrc
+source .config/zsh/.zshrc
+vim .config/zsh
+vim .gitconfig
+cd .config
+ls
+ls -a
+cd ../
+ls
+ls -a
+fzf
+vim .gitconfig
+git config --list --show-origin
+vim .gitconfig
+git config --list --show-origin
+vim .gitconfig
+cat .zprofile
+cd ~/Developer/product-omni-doc
+ls
+git reset --hard preview
+git reset --hard origin/preview
+hugo server
+./bin/scripts/createAllAPIDocs.sh
+hugo server
+git reset --hard origin/preview
+hugo server
+./bin/scripts/createAllAPIDocs.sh
+hugo server\
+hugo server
+hugo server
+./bin/scripts/createAllAPIDocs.sh
+hugo server
+hugo server
+cd Developer
+ls
+cd product-template-doc
+git branch
+git pull
+git checkout main
+git pull
+git checkout main
+cd ../
+cd product-omni-doc
+git branch
+git checkout preview
+git add bin/ts
+git commit -m "squash me"
+git checkout preview
+git pull
+git fetch
+git pull
+git pull
+git checkout main
+git pull
+git checkout preview
+git checkout ts-scripts
+brew tap homebrew/cask-fonts
+brew install --cask font-jetbrains-mono
+clear
+clear
+npx openapi-typescript schema.yaml --output schema.ts
+npm i -g openapi-typescript
+brew install --cask rectangle
+node
+ls
+cd .config
+cd ../
+mkdir .dotfiles
+cd .config
+ls
+ls
+brew install exa
+exa
+ls -l
+exa -l
+exa --grid
+cd ../
+exa -a
+exa -a --grid
+exa --across
+exa
+ls --grid
+exa -a --across
+exa --online
+exa --oneline
+cd .config
+ls
+cd zsh
+ls
+vim aliases
+brew install trash
+alias
+ls
+source ./config/zsh/.zshrc
+source ./.config/zsh/.zshrc
+source ./.config/zsh/.zshrc
+source .zshrc
+source .zshrc
+source .zshrc
+source .zshrc
+cd ~
+source ./.config/zsh/.zshrc
+source ./.config/zsh/.zshrc
+ls -a
+cd .config
+ls
+source ./.config/zsh/.zshrc
+source ./.config/zsh/.zshrc
+ls zsh
+ls -a zsh
+source ./.config/zsh/.zshrc
+source ~/.config/zsh/.zshrc
+source ~/.config/zsh/.zshrc
+source ~/.config/zsh/.zshrc
+cd ~/.config/zsh/.zshrc
+cd ~/.config/zsh/
+cat .zds
+cd ~
+cat ~/.config/zsh/.zshrc
+vim ~/.config/zsh/.zshrc
+vim .config/zsh/rc.zsh
+nvim .config/zsh/rc.zsh
+nvim .config
+nvim ~/.config/zsh/
+touch test.file
+rm test.file
+mkdir bruh
+touch bruh/test.file
+rm bruh/test.file
+rm -r bruh/test.file
+vim .config
+s
+s
+s
+c
+zsh
+cd Developer/product-omni-doc
+gb
+git log
+cd ~
+.config/zsh/
+vim .
+s
+note bruh
+cat ~Documents/notes.md
+cat ~Documents/notes.txt
+cat ~Documents/notes
+vim .
+s
+note test note woo
+cat notes
+cat ~/Documents/notes.txt
+vim
+vim .
+s
+notes
+vim .
+s
+notes
+note new note
+notes
+notes
+c
+cd Documents
+cd Documents/
+ls
+vim 2-6-23.md
+cd ../../
+cd ~
+cd Developer
+code product-omni-doc
+cd ../../
+cd ~
+cd .ssh
+ls
+vim config
+cd ../
+c
+note nx publish openpi-scripts
+note npmtrends.com temp
+note temp file for redocly yaml
+note notes
+notes
+note write exceptions in docs cli for customer and cases
+notes
+Documents
+mkdir Standup
+vim Standup/2-10-23.md
+c
+notes
+note learn some reflection for java parsers
+c
+mkdir Projects
+c
+brew install taskell
+c
+taskell
+taskell
+alias gitroot='cd $(git rev-parse --show-toplevel)'
+zsh
+vim ~/Documents/webhooks.md
+xc
+c
+Developer
+git clone git@bitbucket.org:manhattanassociates/proactive-libs.git
+c
+ssh
+cd ~
+c
+ls -a
+exa -a
+cd .ssh
+ls
+cat github-id_rsa
+cat github-id_rsa.pub
+c
+ls
+ssh-keygen -t ed25519 -b 4096 -C "sross@manh.com" -f bitbucket
+ls
+ssh-add ~/bitbucket
+ssh-add ./bitbucket
+cat ../.gitconfig
+cat bitbucket.pub
+ssh -T git@bitbucket.org
+vim config
+cd ../
+Developer
+git clone git@bitbucket.org:manhattanassociates/proactive-libs.git
+ls
+cd proactive-libs
+ls
+ls packages
+code .
+code ../product-omni-doc
+cd ../product-omni-doc
+gco ts-scripts
+git stash
+gco ts-scripts
+cat package.json
+alias
+vim ./.config/zsh
+s
+g~
+vim ./.config/zsh
+run-help
+alias
+vim ./.config/zsh
+ls Documentrs
+ls Documents
+cat notes.md
+cat Documents/notes.md
+rm Documents/notes.md
+Documents
+mkdir Standup
+cd Standup
+ls
+cat 2-10-23.md
+vim 2-13-23.md
+../
+mkdir Meetings
+cd Meetings
+vim java-annotation-parser.md
+echo nice
+cat .config
+cat notes.md
+notes
+curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
+cat Documents/Meetings/java-annotation-parser.md
+cd Developer
+ls
+mkdir GitHub
+mkdir BitBucket
+mkdir Local
+mv cool-site Local
+mv developer-site-doc developer-site-theme product-omni-doc product-supplychain-doc product-template-doc Github/
+mv proactive-libs BitBucket
+ls
+mv openapi-tool-survey Local/
+ls
+cd BitBucket
+git clone git@bitbucket.org:manhattanassociates/extension-point-doc-generator.git
+ls
+code extension-point-doc-generator
+java
+brew install --cask adoptopenjdk/openjdk/adoptopenjdk8
+java
+c
+code extension-point-doc-generator
+cx
+c
+brew install gradle
+cd ../../
+Documents
+cd ../
+cat Documents/Meetings/java-annotation-parser.md
+cd BitBucket
+cd Developer/BitBucket/extension-point-doc-generator
+ls
+mv annotation-processing.md ~/Documents/Notes
+cd ../../
+cd Local
+gradle init
+ls
+rm app gradle gradlew gradlew.bat settings.gradle
+ls
+mkdir annotation-processing
+cd annotation-processing
+gradle init
+code .
+vim ~/Documents/Notes/annotation-processing.md
+c
+cd ~/Developer/BitBucket
+cd ../
+cd GitHub
+code product-omni-doc
+cd ../BitBucket/proactive-libs/dist/packages/openapi-scripts
+npm link
+cd ~/Developer/Github
+c
+ls
+cd ../
+ls
+mv BitBucket Bitbucker
+mv Bitbucker Bitbucket
+ls
+cd GitHub
+ls
+cd developer-site-theme
+gba
+gbd api-pages-fix
+gco schema-badge-fix
+ls
+code .
+gst 
+alias
+note make an alias for gitlog and git rebase please
+notes
+c
+git log
+grep -lhrn stylesheet
+grep -lhrn td-sidebar
+grep -lhrn link
+grep -lhrn rel="stylesheet"
+grep -lhrn rel=
+git fetch
+note and for git fetch
+git pull origin main
+git log
+git pull origin main
+note look at what jack was telling me to look at
+c
+../../
+cd Bitbucket
+c
+git clone git@bitbucket.org:manhattanassociates/documentation-generator.git
+java
+java --version
