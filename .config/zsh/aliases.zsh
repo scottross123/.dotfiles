@@ -42,3 +42,7 @@ alias rm="trash"
 
 # notes
 alias notes="cat ~/Documents/notes.txt"
+
+# kitty
+alias icat="kitty +kitten icat"
+alias d="kitty +kitten diff"

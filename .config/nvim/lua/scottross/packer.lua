@@ -7,8 +7,12 @@ return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
 
+    -- colors
     use('drewtempelmeyer/palenight.vim')
     use('Rigellute/shades-of-purple.vim')
+    use('junegunn/seoul256.vim')
+    use('ajmwagar/vim-deus')
+
 
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.0',
@@ -70,4 +74,21 @@ return require('packer').startup(function(use)
 
     use('vim-airline/vim-airline')
     use('vim-airline/vim-airline-themes')
+
+    -- markdown writting
+    use('junegunn/goyo.vim')
+    use('junegunn/limelight.vim')
+    use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install",
+        setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
+    use('godlygeek/tabular')
+    use('preservim/vim-markdown')
+
+    -- lightbulb
+    use {
+        'kosayoda/nvim-lightbulb',
+        requires = 'antoinemadec/FixCursorHold.nvim',
+    }
+
+    -- barbarbarbar
+    use { 'romgrk/barbar.nvim', requires = 'nvim-web-devicons' }
 end)
