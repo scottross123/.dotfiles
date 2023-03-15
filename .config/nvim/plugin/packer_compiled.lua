@@ -89,6 +89,11 @@ _G.packer_plugins = {
     path = "/Users/scottross/.local/share/nvim/site/pack/packer/start/barbar.nvim",
     url = "https://github.com/romgrk/barbar.nvim"
   },
+  ["base16-black-metal-scheme"] = {
+    loaded = true,
+    path = "/Users/scottross/.local/share/nvim/site/pack/packer/start/base16-black-metal-scheme",
+    url = "https://github.com/metalelf0/base16-black-metal-scheme"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/Users/scottross/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -156,6 +161,11 @@ _G.packer_plugins = {
     path = "/Users/scottross/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
+  minimalist = {
+    loaded = true,
+    path = "/Users/scottross/.local/share/nvim/site/pack/packer/start/minimalist",
+    url = "https://github.com/dikiaap/minimalist"
+  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/Users/scottross/.local/share/nvim/site/pack/packer/start/nvim-cmp",
@@ -211,6 +221,11 @@ _G.packer_plugins = {
     path = "/Users/scottross/.local/share/nvim/site/pack/packer/start/shades-of-purple.vim",
     url = "https://github.com/Rigellute/shades-of-purple.vim"
   },
+  ["space-vim-dark"] = {
+    loaded = true,
+    path = "/Users/scottross/.local/share/nvim/site/pack/packer/start/space-vim-dark",
+    url = "https://github.com/liuchengxu/space-vim-dark"
+  },
   tabular = {
     loaded = true,
     path = "/Users/scottross/.local/share/nvim/site/pack/packer/start/tabular",
@@ -222,7 +237,7 @@ _G.packer_plugins = {
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
   ["trouble.nvim"] = {
-    config = { "\27LJ\2\nÆ\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\2B\0\2\1K\0\1\0\nsigns\1\0\4\thint\thint\16information\tinfo\fwarning\twarn\nerror\nerror\1\0\5\16fold_closed\6>\14fold_open\6v\nicons\1\25use_diagnostic_signs\1\17indent_lines\1\nsetup\ftrouble\frequire\0" },
+    config = { "\27LJ\2\nÆ\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\2B\0\2\1K\0\1\0\nsigns\1\0\4\fwarning\twarn\thint\thint\nerror\nerror\16information\tinfo\1\0\5\17indent_lines\1\16fold_closed\6>\14fold_open\6v\nicons\1\25use_diagnostic_signs\1\nsetup\ftrouble\frequire\0" },
     loaded = true,
     path = "/Users/scottross/.local/share/nvim/site/pack/packer/start/trouble.nvim",
     url = "https://github.com/folke/trouble.nvim"
@@ -231,6 +246,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/scottross/.local/share/nvim/site/pack/packer/start/undotree",
     url = "https://github.com/mbbill/undotree"
+  },
+  ["vim-256noir"] = {
+    loaded = true,
+    path = "/Users/scottross/.local/share/nvim/site/pack/packer/start/vim-256noir",
+    url = "https://github.com/andreasvc/vim-256noir"
   },
   ["vim-airline"] = {
     loaded = true,
@@ -266,7 +286,7 @@ try_loadstring("\27LJ\2\n=\0\0\2\0\4\0\0056\0\0\0009\0\1\0005\1\3\0=\1\2\0K\0\1\
 time([[Setup for markdown-preview.nvim]], false)
 -- Config for: trouble.nvim
 time([[Config for trouble.nvim]], true)
-try_loadstring("\27LJ\2\nÆ\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\2B\0\2\1K\0\1\0\nsigns\1\0\4\thint\thint\16information\tinfo\fwarning\twarn\nerror\nerror\1\0\5\16fold_closed\6>\14fold_open\6v\nicons\1\25use_diagnostic_signs\1\17indent_lines\1\nsetup\ftrouble\frequire\0", "config", "trouble.nvim")
+try_loadstring("\27LJ\2\nÆ\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\2B\0\2\1K\0\1\0\nsigns\1\0\4\fwarning\twarn\thint\thint\nerror\nerror\16information\tinfo\1\0\5\17indent_lines\1\16fold_closed\6>\14fold_open\6v\nicons\1\25use_diagnostic_signs\1\nsetup\ftrouble\frequire\0", "config", "trouble.nvim")
 time([[Config for trouble.nvim]], false)
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]

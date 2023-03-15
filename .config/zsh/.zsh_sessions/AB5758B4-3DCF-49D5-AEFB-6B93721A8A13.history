@@ -686,3 +686,203 @@ taskell
 taskell
 alias gitroot='cd $(git rev-parse --show-toplevel)'
 zsh
+vim ~/Documents/webhooks.md
+xc
+c
+Developer
+git clone git@bitbucket.org:manhattanassociates/proactive-libs.git
+c
+ssh
+cd ~
+c
+ls -a
+exa -a
+cd .ssh
+ls
+cat github-id_rsa
+cat github-id_rsa.pub
+c
+ls
+ssh-keygen -t ed25519 -b 4096 -C "sross@manh.com" -f bitbucket
+ls
+ssh-add ~/bitbucket
+ssh-add ./bitbucket
+cat ../.gitconfig
+cat bitbucket.pub
+ssh -T git@bitbucket.org
+vim config
+cd ../
+Developer
+git clone git@bitbucket.org:manhattanassociates/proactive-libs.git
+ls
+cd proactive-libs
+ls
+ls packages
+code .
+code ../product-omni-doc
+cd ../product-omni-doc
+gco ts-scripts
+git stash
+gco ts-scripts
+cat package.json
+alias
+vim ./.config/zsh
+s
+g~
+vim ./.config/zsh
+run-help
+alias
+vim ./.config/zsh
+ls Documentrs
+ls Documents
+cat notes.md
+cat Documents/notes.md
+rm Documents/notes.md
+Documents
+mkdir Standup
+cd Standup
+ls
+cat 2-10-23.md
+vim 2-13-23.md
+../
+mkdir Meetings
+cd Meetings
+vim java-annotation-parser.md
+echo nice
+cat .config
+cat notes.md
+notes
+curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
+cat Documents/Meetings/java-annotation-parser.md
+cd Developer
+ls
+mkdir GitHub
+mkdir BitBucket
+mkdir Local
+mv cool-site Local
+mv developer-site-doc developer-site-theme product-omni-doc product-supplychain-doc product-template-doc Github/
+mv proactive-libs BitBucket
+ls
+mv openapi-tool-survey Local/
+ls
+cd BitBucket
+git clone git@bitbucket.org:manhattanassociates/extension-point-doc-generator.git
+ls
+code extension-point-doc-generator
+java
+brew install --cask adoptopenjdk/openjdk/adoptopenjdk8
+java
+c
+code extension-point-doc-generator
+cx
+c
+brew install gradle
+cd ../../
+Documents
+cd ../
+cat Documents/Meetings/java-annotation-parser.md
+cd BitBucket
+cd Developer/BitBucket/extension-point-doc-generator
+ls
+mv annotation-processing.md ~/Documents/Notes
+cd ../../
+cd Local
+gradle init
+ls
+rm app gradle gradlew gradlew.bat settings.gradle
+ls
+mkdir annotation-processing
+cd annotation-processing
+gradle init
+code .
+vim ~/Documents/Notes/annotation-processing.md
+c
+cd ~/Developer/BitBucket
+cd ../
+cd GitHub
+code product-omni-doc
+cd ../BitBucket/proactive-libs/dist/packages/openapi-scripts
+npm link
+cd ~/Developer/Github
+c
+ls
+cd ../
+ls
+mv BitBucket Bitbucker
+mv Bitbucker Bitbucket
+ls
+cd GitHub
+ls
+cd developer-site-theme
+gba
+gbd api-pages-fix
+gco schema-badge-fix
+ls
+code .
+gst 
+alias
+note make an alias for gitlog and git rebase please
+notes
+c
+git log
+grep -lhrn stylesheet
+grep -lhrn td-sidebar
+grep -lhrn link
+grep -lhrn rel="stylesheet"
+grep -lhrn rel=
+git fetch
+note and for git fetch
+git pull origin main
+git log
+git pull origin main
+note look at what jack was telling me to look at
+c
+../../
+cd Bitbucket
+c
+git clone git@bitbucket.org:manhattanassociates/documentation-generator.git
+java
+java --version
+Desktop
+mv *.md ~/Documents/Notes
+rm *
+cd Documents
+ls
+cd Notes
+notes
+ls
+vim java.md
+vim annotation-processing.md
+vim annotation-processing.md
+vim java.md
+open /etc/hosts
+sudo vim /etc/hosts
+c
+cd Developer/Bitbucket/proactive-libs
+gba
+git fetch
+git pull origin openapi-to-manhoc-converter
+ssh -t -vvv git@bitbucket.org
+ssh-add -l
+cd ~
+cd
+ls
+ls -a
+cd .ssh
+ls
+cat config
+ssh-add ~/.ssh/bitbucket
+cd .dotfiles/.config
+l
+ls
+cd kitty
+ls
+open .
+rm /var/folders/*/*/*/com.apple.dock.iconcache; killall Dock
+rm /var/folders/*/*/*/com.apple.dock.iconcache; killall Dock
+brew install imagemagick
+rm /var/folders/*/*/*/com.apple.dock.iconcache; killall Dock
+rm /var/folders/*/*/*/com.apple.dock.iconcache; killall Dock
+ssh scott@kamino
+ssh -cd scott@kamino
+ssh -xC scott@kamino

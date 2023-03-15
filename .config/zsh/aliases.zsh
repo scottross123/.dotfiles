@@ -46,3 +46,9 @@ alias notes="cat ~/Documents/notes.txt"
 # kitty
 alias icat="kitty +kitten icat"
 alias d="kitty +kitten diff"
+
+# jump to note/vault dir
+alias cdvault="cd ~/Documents/Personal"
+
+# use kitten if im using kitty for ssh
+[ "$TERM" = "xterm-kitty" ] && alias ssh="kitty +kitten ssh"

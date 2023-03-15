@@ -9,10 +9,12 @@ return require('packer').startup(function(use)
 
     -- colors
     use('drewtempelmeyer/palenight.vim')
-    use('Rigellute/shades-of-purple.vim')
     use('junegunn/seoul256.vim')
     use('ajmwagar/vim-deus')
-
+    use('metalelf0/base16-black-metal-scheme')
+    use('liuchengxu/space-vim-dark')
+    use('andreasvc/vim-256noir')
+    use('dikiaap/minimalist')
 
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.0',
