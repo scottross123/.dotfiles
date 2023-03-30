@@ -1,5 +1,10 @@
 # neovim instead of vim
-alias vim="nvim"
+# alias vim="nvim"
+
+# list
+alias ls='ls --color=auto'
+alias ll='ls -lAh --color=auto'
+alias lrt='ls -lrt --color=auto'
 
 # grep colors
 alias grep='grep --color=auto'
@@ -9,7 +14,7 @@ alias fgrep='fgrep --color=auto'
 # "are you sure you want to overwrite x?"
 alias cp="cp -i"
 alias mv="mv -i"
-# alias rm="rm -i"
+alias rm="rm -i"
 
 # get top process eating memory
 alias psmem='ps auxf | sort -nr -k 4 | head -5'
@@ -38,7 +43,7 @@ alias s="source ~/.config/zsh/.zshrc"
 alias c="clear"
 
 # trash instead of rm
-alias rm="trash"
+# alias rm="trash"
 
 # notes
 alias notes="cat ~/Documents/notes.txt"
