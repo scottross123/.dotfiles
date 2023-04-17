@@ -11,8 +11,9 @@ rm $HOME/.zshrc
 #ln -s $DOT_CONFIG/zsh/zprofile $HOME/.zprofile
 ln -s $DOTFILES/zshenv $HOME/.zshenv
 #ln -s $DOT_CONFIG $HOME_CONFIG
+mkdir -p $HOME_CONFIG
 ln -s $DOT_CONFIG/zshrc $HOME_CONFIG/.zshrc
-ln -s $DOT_CONFIG/functions.zsh $HOME_CONFIG/.zsh
+ln -s $DOT_CONFIG/functions.zsh $HOME_CONFIG/functions.zsh
 ln -s $DOT_CONFIG/exports.zsh $HOME_CONFIG/exports.zsh
 ln -s $DOT_CONFIG/aliases.zsh $HOME_CONFIG/aliases.zsh
 ln -s $DOT_CONFIG/vim.zsh $HOME_CONFIG/vim.zsh
