@@ -13,11 +13,11 @@ ln -s $DOTFILES/zshenv $HOME/.zshenv
 #ln -s $DOT_CONFIG $HOME_CONFIG
 mkdir -p $HOME_CONFIG
 ln -s $DOT_CONFIG/zshrc $HOME_CONFIG/.zshrc
-ln -s $DOT_CONFIG/functions.zsh $HOME_CONFIG/functions.zsh
-ln -s $DOT_CONFIG/exports.zsh $HOME_CONFIG/exports.zsh
-ln -s $DOT_CONFIG/aliases.zsh $HOME_CONFIG/aliases.zsh
-ln -s $DOT_CONFIG/vim.zsh $HOME_CONFIG/vim.zsh
-ln -s $DOT_CONFIG/prompt.zsh $HOME_CONFIG/prompt.zsh
+ln -s $DOT_CONFIG/functions $HOME_CONFIG/functions
+ln -s $DOT_CONFIG/exports $HOME_CONFIG/exports
+ln -s $DOT_CONFIG/aliases $HOME_CONFIG/aliases
+ln -s $DOT_CONFIG/vim $HOME_CONFIG/vim
+ln -s $DOT_CONFIG/prompt $HOME_CONFIG/prompt
 
 source $HOME/.zprofile
 source $HOME/.zshenv

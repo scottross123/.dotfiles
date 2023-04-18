@@ -1,4 +1,4 @@
-function zsh_add_plugin() {
+function plug() {
     PLUGIN_NAME=$(echo $1 | cut -d "/" -f 2)
     if [ -d "$ZDOTDIR/plugins/$PLUGIN_NAME" ]; then 
         # For plugins
