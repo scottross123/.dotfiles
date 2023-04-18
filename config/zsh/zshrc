@@ -16,13 +16,17 @@ autoload -Uz compinit
 compinit
 _comp_options+=(globdots)
 
-source "$ZDOTDIR/functions.zsh"
+# source "$ZDOTDIR/functions.zsh"
+
+for file in $ZDOTDIR/functions; do
+	source $file;
+done
 
 # add files to source
-zsh_add_file "exports.zsh"
-zsh_add_file "vim.zsh"
-zsh_add_file "aliases.zsh"
-zsh_add_file "prompt.zsh"
+zsh_add_file "exports"
+zsh_add_file "vim"
+zsh_add_file "aliases"
+zsh_add_file "prompt"
 
 # plugins
 zsh_add_plugin "zsh-users/zsh-autosuggestions"
