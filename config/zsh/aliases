@@ -34,7 +34,11 @@ alias gba="git branch -a"
 alias gbd="git branch --delete"
 alias gu="git reset --soft HEAD~1"
 alias gst="git status"
-alias gr='cd $(git rev-parse --show-toplevel)'
+alias cdgr='cd $(git rev-parse --show-toplevel)'
+alias gf="git fetch"
+alias gp="git pull"
+alias gfgp="git fetch && git pull"
+alias gpu="git push"
 
 # source
 alias s="source ~/.config/zsh/.zshrc" 
