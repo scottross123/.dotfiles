@@ -36,7 +36,10 @@ ln -s $DOT_CONFIG/neofetch $HOME_CONFIG/neofetch
 echo "symlinked neofetch in .config"	
 ln -s $DOT_CONFIG/nvim $HOME_CONFIG/nvim
 echo "symlinked nvim in .config"	
+ln -s $DOT_CONFIG/awesome $HOME_CONFIG/awesome
+echo "symlinked awesome in .config"
 ln -s $DOTFILES/bin $HOME/.local/bin
+echo "symlinked bin folder"
 # vscode
 # firefox
 

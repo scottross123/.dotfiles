@@ -7,5 +7,5 @@ end
 
 -- colorMe();
 
-vim.cmd('colorscheme minimalist')
+vim.cmd('colorscheme PaperColor')
 

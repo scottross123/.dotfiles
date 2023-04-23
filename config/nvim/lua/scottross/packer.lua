@@ -10,11 +10,12 @@ return require('packer').startup(function(use)
     -- colors
     use('drewtempelmeyer/palenight.vim')
     use('junegunn/seoul256.vim')
-    use('ajmwagar/vim-deus')
-    use('metalelf0/base16-black-metal-scheme')
-    use('liuchengxu/space-vim-dark')
-    use('andreasvc/vim-256noir')
+    -- use('metalelf0/base16-black-metal-scheme')
+    -- use('liuchengxu/space-vim-dark')
+    -- use('andreasvc/vim-256noir')
     use('dikiaap/minimalist')
+    use('agude/vim-eldar')
+    use('NLKNguyen/papercolor-theme')
 
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.0',
@@ -26,6 +27,7 @@ return require('packer').startup(function(use)
         'nvim-treesitter/nvim-treesitter',
         run = ':TSUpdate'
     }
+
     use('nvim-treesitter/playground')
     use('theprimeagen/harpoon')
     use('mbbill/undotree')
@@ -92,5 +94,5 @@ return require('packer').startup(function(use)
     }
 
     -- barbarbarbar
-    use { 'romgrk/barbar.nvim', requires = 'nvim-web-devicons' }
+    -- use { 'romgrk/barbar.nvim', requires = 'nvim-web-devicons' }
 end)
