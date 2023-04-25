@@ -61,3 +61,6 @@ alias cdvault="cd ~/Documents/Personal"
 
 # use kitten if im using kitty for ssh
 [ "$TERM" = "xterm-kitty" ] && alias ssh="kitty +kitten ssh"
+
+# instant http server in current directory
+alias serve-dir="python3 -m http.server"
