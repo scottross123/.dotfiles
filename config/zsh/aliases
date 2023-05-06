@@ -50,14 +50,14 @@ alias c="clear"
 # alias rm="trash"
 
 # notes
-alias notes="cat ~/Documents/notes.txt"
+alias notes="cat ~/documents/notes.txt"
 
 # kitty
 alias icat="kitty +kitten icat"
 alias d="kitty +kitten diff"
 
 # jump to note/vault dir
-alias cdvault="cd ~/Documents/Personal"
+alias cdvault="cd ~/documents/vault"
 
 # use kitten if im using kitty for ssh
 [ "$TERM" = "xterm-kitty" ] && alias ssh="kitty +kitten ssh"
