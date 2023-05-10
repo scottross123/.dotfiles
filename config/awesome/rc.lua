@@ -296,12 +296,12 @@ globalkeys = gears.table.join(
 
     awful.key({}, "XF86MonBrightnessUp", function()
         --brightness_widget:inc()
-        awful.spawn.with_shell("xbacklight -inc 10")
+        awful.spawn.with_shell("brightnessctl set 10%+")
     end),
 
     awful.key({}, "XF86MonBrightnessDown", function()
         --brightness_widget:dec()
-        awful.spawn.with_shell("xbacklight -dec 10")
+        awful.spawn.with_shell("brightnessctl set 10%-")
     end),
 
     awful.key({ modkey, }, "s", hotkeys_popup.show_help,
@@ -384,9 +384,11 @@ globalkeys = gears.table.join(
         end,
         { description = "restore minimized", group = "client" }),
 
-    -- Prompt
-    awful.key({ modkey }, "r", function() awful.screen.focused().mypromptbox:run() end,
-        { description = "run prompt", group = "launcher" }),
+    -- rofi
+    awful.key({ modkey }, "r", function()
+       awful.util.spawn('rofi -show drun')
+    end,
+        { description = "run rofi", group = "launcher" }),
 
     awful.key({ modkey }, "x",
         function()
