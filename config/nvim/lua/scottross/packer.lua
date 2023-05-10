@@ -16,6 +16,9 @@ return require('packer').startup(function(use)
     use('dikiaap/minimalist')
     use('agude/vim-eldar')
     use('NLKNguyen/papercolor-theme')
+    use { 'nyoom-engineering/oxocarbon.nvim' }
+    use('RRethy/vim-illuminate')
+    use({ 'rrethy/vim-hexokinase', run = 'cd ~/.local/share/nvim/site/pack/packer/start/vim-hexokinase && make hexokinase' })
 
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.0',
@@ -61,8 +64,8 @@ return require('packer').startup(function(use)
         config = function()
             require("trouble").setup {
                 icons = false,
-                fold_open = "v", -- icon used for open folds
-                fold_closed = ">", -- icon used for closed folds
+                fold_open = "v",      -- icon used for open folds
+                fold_closed = ">",    -- icon used for closed folds
                 indent_lines = false, -- add an indent guide below the fold icons
                 signs = {
                     -- icons / text used for a diagnostic
@@ -82,8 +85,12 @@ return require('packer').startup(function(use)
     -- markdown writting
     use('junegunn/goyo.vim')
     use('junegunn/limelight.vim')
-    use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install",
-        setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
+    use({
+        "iamcco/markdown-preview.nvim",
+        run = "cd app && npm install",
+        setup = function() vim.g.mkdp_filetypes = { "markdown" } end,
+        ft = { "markdown" },
+    })
     use('godlygeek/tabular')
     use('preservim/vim-markdown')
 

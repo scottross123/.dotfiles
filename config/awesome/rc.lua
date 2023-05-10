@@ -2,7 +2,10 @@
 -- found (e.g. lgi). If LuaRocks is not installed, do nothing.
 pcall(require, "luarocks.loader")
 
-require ("secrets")
+require("secrets")
+require("theme")
+
+local tasklist = require("widgets.tasklist")
 
 -- Standard awesome library
 local gears = require("gears")
@@ -34,8 +37,8 @@ if awesome.startup_errors then
         text = awesome.startup_errors
     })
 end
-
 -- Handle runtime errors after startup
+--
 do
     local in_error = false
     awesome.connect_signal("debug::error", function(err)
@@ -55,20 +58,17 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
-beautiful.init("/home/scott/.config/awesome/themes/zenburn/theme.lua")
-beautiful.get().wallpaper = "/home/scott/.config/awesome/themes/zenburn/zenburn-background.png"
-
 -- This is used later as the default terminal and editor to run.
-terminal = "kitty"
-editor = os.getenv("EDITOR") or "nvim"
-editor_cmd = terminal .. " -e " .. editor
+local terminal = "kitty"
+local editor = os.getenv("EDITOR") or "nvim"
+local editor_cmd = terminal .. " -e " .. editor
 
 -- Default modkey.
 -- Usually, Mod4 is the key with a logo between Control and Alt.
 -- If you do not like this or do not have such a key,
 -- I suggest you to remap Mod4 to another key using xmodmap or other tools.
 -- However, you can use another modifier like Mod1, but it may interact with others.
-modkey = "Mod4"
+local modkey = "Mod4"
 
 -- Table of layouts to cover with awful.layout.inc, order matters.
 awful.layout.layouts = {
@@ -119,8 +119,6 @@ else
     })
 end
 
-praisewidget = wibox.widget.textbox()
-praisewidget.text = "You are great!"
 mylauncher = awful.widget.launcher({
     image = beautiful.awesome_icon,
     menu = mymainmenu
@@ -233,15 +231,16 @@ awful.screen.connect_for_each_screen(function(s)
         buttons = taglist_buttons
     }
 
-    -- Create a tasklist widget
-    s.mytasklist = awful.widget.tasklist {
-        screen  = s,
-        filter  = awful.widget.tasklist.filter.currenttags,
-        buttons = tasklist_buttons
-    }
+    local mytasklist = tasklist.init(s)
 
     -- Create the wibox
-    s.mywibox = awful.wibar({ position = "top", screen = s })
+    s.mywibox = awful.wibar({
+        position = "top",
+        screen = s,
+        type = "desktop",
+        height = 20,
+    })
+
 
     -- Add widgets to the wibox
     s.mywibox:setup {
@@ -253,7 +252,7 @@ awful.screen.connect_for_each_screen(function(s)
             s.mytaglist,
             s.mypromptbox,
         },
-        s.mytasklist, -- Middle widget
+        mytasklist, -- Middle widget
         {
             -- Right widgets
             layout = wibox.layout.fixed.horizontal,
@@ -261,16 +260,11 @@ awful.screen.connect_for_each_screen(function(s)
             wibox.widget.systray(),
             apt_widget(),
             net_speed_widget(),
-            cpu_widget(),
+            -- cpu_widget(),
             ram_widget(),
             volume_widget(),
             battery_widget(),
             mytextclock,
-            -- TODO get this to work
-            weather_widget({
-                api_key=OPENWEATHER_API_KEY,
-                coordinates=COORDINATES
-            }),
             -- s.mylayoutbox,
         },
     }
