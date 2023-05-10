@@ -1,19 +1,11 @@
-local awful = require("awful")
 local gears = require("gears")
+local awful = require("awful")
 local volume_widget = require("widgets.volume-widget.volume")
 local hotkeys_popup = require("awful.hotkeys_popup")
 
-require("vars")
+local modkey = "Mod4"
 
--- local modkey = "Mod4"
-
-local bindings = {
-    buttons = gears.table.join(
-        awful.button({}, 3, function() mymainmenu:toggle() end),
-        awful.button({}, 4, awful.tag.viewnext),
-        awful.button({}, 5, awful.tag.viewprev)
-    ),
-
+local keys = {
     globalkeys = gears.table.join(
 
     -- keyboard volume, control, brightness control, etc
@@ -58,8 +50,13 @@ local bindings = {
             end,
             { description = "focus previous by index", group = "client" }
         ),
-        awful.key({ modkey, }, "w", function() mymainmenu:show() end,
-            { description = "show main menu", group = "awesome" }),
+
+        -- awful.key({ modkey, }, "w", function() mymainmenu:show() end,
+        --  { description = "show main menu", group = "awesome" }),
+        --
+        --  this doesn't work rn but i'll figure it out later
+        awful.key({ modkey, }, "w", function(c) c:kill() end,
+            { description = "close", group = "client" }),
 
         -- Layout manipulation
         awful.key({ modkey, "Shift" }, "j", function() awful.client.swap.byidx(1) end,
@@ -87,7 +84,7 @@ local bindings = {
         awful.key({ modkey, "Control" }, "r", awesome.restart,
             { description = "reload awesome", group = "awesome" }),
         awful.key({ modkey, "Shift" }, "q", awesome.quit,
-            { description = "quit awesome", group = "awesome" }),
+             { description = "quit awesome", group = "awesome" }),
         awful.key({ modkey, }, "l", function() awful.tag.incmwfact(0.05) end,
             { description = "increase master width factor", group = "layout" }),
         awful.key({ modkey, }, "h", function() awful.tag.incmwfact(-0.05) end,
@@ -117,9 +114,16 @@ local bindings = {
             end,
             { description = "restore minimized", group = "client" }),
 
-        -- Prompt
-        awful.key({ modkey }, "r", function() awful.screen.focused().mypromptbox:run() end,
-            { description = "run prompt", group = "launcher" }),
+        -- rofi
+        awful.key({ modkey }, "r", function()
+                awful.util.spawn('rofi -show drun')
+            end,
+            { description = "run rofi", group = "launcher" }),
+
+        awful.key({ modkey, "Shift" }, "r", function()
+                awful.util.spawn('rofi -show ssh')
+            end,
+            { description = "run rofi ssh", group = "launcher" }),
 
         awful.key({ modkey }, "x",
             function()
@@ -135,7 +139,6 @@ local bindings = {
         awful.key({ modkey }, "p", function() menubar.show() end,
             { description = "show the menubar", group = "launcher" })
     ),
-
     clientkeys = gears.table.join(
         awful.key({ modkey, }, "f",
             function(c)
@@ -178,14 +181,29 @@ local bindings = {
                 c:raise()
             end,
             { description = "(un)maximize horizontally", group = "client" })
+    ),
+    clientbuttons = gears.table.join(
+        awful.button({}, 1, function(c)
+            c:emit_signal("request::activate", "mouse_click", { raise = true })
+        end),
+        awful.button({ modkey }, 1, function(c)
+            c:emit_signal("request::activate", "mouse_click", { raise = true })
+            awful.mouse.client.move(c)
+        end),
+        awful.button({ modkey }, 3, function(c)
+            c:emit_signal("request::activate", "mouse_click", { raise = true })
+            awful.mouse.client.resize(c)
+        end)
+    ),
+    mousebuttons = gears.table.join(
+        awful.button({}, 3, function() mymainmenu:toggle() end),
+        awful.button({}, 4, awful.tag.viewnext),
+        awful.button({}, 5, awful.tag.viewprev)
     )
 }
 
--- Bind all key numbers to tags.
--- Be careful: we use keycodes to make it work on any keyboard layout.
--- This should map on the top row of your keyboard, usually 1 to 9.
 for i = 1, 9 do
-    bindings.globalkeys = gears.table.join(bindings.globalkeys,
+    keys.globalkeys = gears.table.join(keys.globalkeys,
         -- View tag only.
         awful.key({ modkey }, "#" .. i + 9,
             function()
@@ -231,22 +249,8 @@ for i = 1, 9 do
     )
 end
 
-bindings.clientbuttons = gears.table.join(
-    awful.button({}, 1, function(c)
-        c:emit_signal("request::activate", "mouse_click", { raise = true })
-    end),
-    awful.button({ modkey }, 1, function(c)
-        c:emit_signal("request::activate", "mouse_click", { raise = true })
-        awful.mouse.client.move(c)
-    end),
-    awful.button({ modkey }, 3, function(c)
-        c:emit_signal("request::activate", "mouse_click", { raise = true })
-        awful.mouse.client.resize(c)
-    end)
-)
 
--- Set keys
-root.keys(bindings.globalkeys)
-root.buttons(bindings.buttons)
+root.keys(keys.globalkeys)
+root.buttons(keys.mousebuttons)
 
-return bindings
+return keys
