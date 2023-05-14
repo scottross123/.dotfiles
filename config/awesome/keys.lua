@@ -3,6 +3,7 @@ local awful = require("awful")
 local volume_widget = require("widgets.volume-widget.volume")
 local hotkeys_popup = require("awful.hotkeys_popup")
 
+local terminal = "kitty"
 local modkey = "Mod4"
 
 local keys = {
