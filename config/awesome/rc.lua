@@ -4,7 +4,7 @@ pcall(require, "luarocks.loader")
 
 require("secrets")
 require("theme")
-require("keys")
+local keys = require("keys")
 
 local tasklist = require("widgets.tasklist")
 
@@ -165,6 +165,7 @@ local taglist_buttons = gears.table.join(
     awful.button({}, 5, function(t) awful.tag.viewprev(t.screen) end)
 )
 
+
 local tasklist_buttons = gears.table.join(
     awful.button({}, 1, function(c)
         if c == client.focus then
@@ -242,7 +243,6 @@ awful.screen.connect_for_each_screen(function(s)
         height = 20,
     })
 
-
     -- Add widgets to the wibox
     s.mywibox:setup {
         layout = wibox.layout.align.horizontal,
@@ -284,8 +284,8 @@ awful.rules.rules = {
             border_color = beautiful.border_normal,
             focus = awful.client.focus.filter,
             raise = true,
-            keys = clientkeys,
-            buttons = clientbuttons,
+            keys = keys.clientkeys,
+            buttons = keys.clientbuttons,
             screen = awful.screen.preferred,
             placement = awful.placement.no_overlap + awful.placement.no_offscreen
         }

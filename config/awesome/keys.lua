@@ -139,6 +139,7 @@ local keys = {
         awful.key({ modkey }, "p", function() menubar.show() end,
             { description = "show the menubar", group = "launcher" })
     ),
+
     clientkeys = gears.table.join(
         awful.key({ modkey, }, "f",
             function(c)
@@ -195,6 +196,7 @@ local keys = {
             awful.mouse.client.resize(c)
         end)
     ),
+
     mousebuttons = gears.table.join(
         awful.button({}, 3, function() mymainmenu:toggle() end),
         awful.button({}, 4, awful.tag.viewnext),
