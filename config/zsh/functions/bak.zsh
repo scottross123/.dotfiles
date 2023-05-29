@@ -1,4 +1,4 @@
 function bak() {
     now=$(date +"%m%d%y-%T")
-    cp $1 $1-$now.bak 
+    cp -r $1 $1-$now.bak 
 }

@@ -64,3 +64,6 @@ alias cdvault="cd ~/documents/vault"
 
 # instant http server in current directory
 alias serve-dir="python3 -m http.server"
+
+# linux logout
+alias logout="pkill -KILL -u $(whoami)"
