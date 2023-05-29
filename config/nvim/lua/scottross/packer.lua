@@ -7,7 +7,28 @@ return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
 
-    -- colors
+    -- dashboard
+    use {
+        'glepnir/dashboard-nvim',
+        event = 'VimEnter',
+        config = function()
+            require('dashboard').setup {
+                theme = 'hyper',
+                config = {
+                    -- header = { "bruh" }
+                },
+                preview = {
+                    command, -- preview command
+                    file_path, -- preview file path
+                    file_height, -- preview file height
+                    file_width, -- preview file width
+                },
+            }
+        end,
+        requires = { 'nvim-tree/nvim-web-devicons' }
+    }
+
+    -- themes
     use('drewtempelmeyer/palenight.vim')
     use('junegunn/seoul256.vim')
     -- use('metalelf0/base16-black-metal-scheme')
@@ -18,7 +39,10 @@ return require('packer').startup(function(use)
     use('NLKNguyen/papercolor-theme')
     use { 'nyoom-engineering/oxocarbon.nvim' }
     use('RRethy/vim-illuminate')
-    use({ 'rrethy/vim-hexokinase', run = 'cd ~/.local/share/nvim/site/pack/packer/start/vim-hexokinase && make hexokinase' })
+    use({
+        'rrethy/vim-hexokinase',
+        run = 'cd ~/.local/share/nvim/site/pack/packer/start/vim-hexokinase && make hexokinase'
+    })
 
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.0',
