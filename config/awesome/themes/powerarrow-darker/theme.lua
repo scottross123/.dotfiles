@@ -45,7 +45,7 @@ else
 end
 --}}}
 
-theme.font                          = "Terminus 9"
+theme.font                          = "IBM Plex Mono"
 theme.fg_normal                     = "#DDDDFF"
 theme.fg_focus                      = "#F0DFAF"
 theme.fg_urgent                     = "#CC9393"
@@ -112,8 +112,8 @@ theme.widget_mail                   = themedir .. "/icons/mail.png"
 theme.widget_mail_on                = themedir .. "/icons/mail_on.png"
 
 -- theme.tasklist_disable_icon         = true
-theme.tasklist_floating             = ""
-theme.tasklist_maximized_horizontal = ""
-theme.tasklist_maximized_vertical   = ""
+-- theme.tasklist_floating             = ""
+-- theme.tasklist_maximized_horizontal = ""
+-- theme.tasklist_maximized_vertical   = ""
 
 return theme

@@ -8,3 +8,4 @@ beautiful.init(theme_dir .. "/powerarrow-darker/theme.lua")
 --powerarrow-darkerbeautiful.wallpaper = wallpaper_dir .. "/deb.webp"
 --beautiful.useless_gap = 4
 gears.wallpaper.set("#0a0a0a")
+beautiful.font = "IBM Plex Mono"

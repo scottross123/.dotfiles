@@ -27,12 +27,12 @@ local function worker(user_args)
     local args = user_args or {}
 
     local font = args.font or 'Play 8'
-    local path_to_icons = args.path_to_icons or "/usr/share/icons/Arc/status/symbolic/"
+    local path_to_icons = args.path_to_icons or "../themes/powerarrow-dark/icons/"
     local show_current_level = args.show_current_level or false
     local margin_left = args.margin_left or 0
     local margin_right = args.margin_right or 0
 
-    local display_notification = args.display_notification or false
+    local display_notification = args.display_notification or true
     local display_notification_onClick = args.display_notification_onClick or true
     local position = args.notification_position or "top_right"
     local timeout = args.timeout or 10

@@ -4,6 +4,8 @@ pcall(require, "luarocks.loader")
 
 require("secrets")
 require("theme")
+require("autorun")
+
 local keys = require("keys")
 
 local tasklist = require("widgets.tasklist")
@@ -34,7 +36,8 @@ local has_fdo, freedesktop = pcall(require, "freedesktop")
 if awesome.startup_errors then
     naughty.notify({
         preset = naughty.config.presets.critical,
-        title = "Oops, there were errors during startup!",
+        -- title = "Oops, there were errors during startup!",
+        title = "Oh fuck, startup errors!!!",
         text = awesome.startup_errors
     })
 end
@@ -49,7 +52,8 @@ do
 
         naughty.notify({
             preset = naughty.config.presets.critical,
-            title = "Oops, an error happened!",
+            -- title = "Oops, an error happened!",
+            title = "Oh fuck, something bad happened",
             text = tostring(err)
         })
         in_error = false
@@ -211,9 +215,9 @@ awful.screen.connect_for_each_screen(function(s)
     -- awful.tag({ "1", "2", "3", "4", "5", "6", "7", "8", "9" }, s, awful.layout.layouts[1])
 
 
-    local names = { "web", "term", "office", "music", "games", "misc" }
+    local names = { "1", "2", "3", "4", "5", "6" }
     local l = awful.layout.suit
-    local layouts = { l.tile, l.tile, l.floating, l.tile.left, l.floating, l.floating }
+    local layouts = { l.tile, l.tile, l.tile, l.floating, l.floating, l.floating }
     awful.tag(names, s, layouts)
 
     -- Create a promptbox for each screen
@@ -240,7 +244,7 @@ awful.screen.connect_for_each_screen(function(s)
         position = "top",
         screen = s,
         type = "desktop",
-        height = 20,
+        height = 24,
     })
 
     -- Add widgets to the wibox
@@ -251,7 +255,7 @@ awful.screen.connect_for_each_screen(function(s)
             layout = wibox.layout.fixed.horizontal,
             mylauncher,
             s.mytaglist,
-            s.mypromptbox,
+            -- s.mypromptbox,
         },
         mytasklist, -- Middle widget
         {
@@ -259,10 +263,6 @@ awful.screen.connect_for_each_screen(function(s)
             layout = wibox.layout.fixed.horizontal,
             -- mykeyboardlayout,
             wibox.widget.systray(),
-            apt_widget(),
-            net_speed_widget(),
-            -- cpu_widget(),
-            ram_widget(),
             volume_widget(),
             battery_widget(),
             mytextclock,

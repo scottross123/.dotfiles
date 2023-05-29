@@ -2,6 +2,7 @@ local gears = require("gears")
 local awful = require("awful")
 local volume_widget = require("widgets.volume-widget.volume")
 local hotkeys_popup = require("awful.hotkeys_popup")
+local menubar = require("menubar")
 
 local terminal = "kitty"
 local modkey = "Mod4"

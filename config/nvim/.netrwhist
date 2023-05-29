@@ -1,5 +1,9 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =5
+let g:netrw_dirhistcnt =9
+let g:netrw_dirhist_9='/home/scott/.dotfiles'
+let g:netrw_dirhist_8='/home/scott/.dotfiles/config/awesome'
+let g:netrw_dirhist_7='/home/scott'
+let g:netrw_dirhist_6='/home/scott/.dotfiles'
 let g:netrw_dirhist_5='/home/scott/.dotfiles/config/zsh/plugins'
 let g:netrw_dirhist_4='/home/scott/.dotfiles/config/zsh'
 let g:netrw_dirhist_3='/home/scott'
