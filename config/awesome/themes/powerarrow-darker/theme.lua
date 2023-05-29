@@ -43,7 +43,10 @@ elseif awful.util.file_readable(wallpaper3) then
 else
   theme.wallpaper = wallpaper4
 end
---}}}
+
+local purple40 = "#BE95FF"
+
+theme.tasklist_disable_task_name = true
 
 theme.font                          = "IBM Plex Mono"
 theme.fg_normal                     = "#DDDDFF"
@@ -54,13 +57,15 @@ theme.bg_focus                      = "#313131"
 theme.bg_urgent                     = "#1A1A1A"
 theme.border_width                  = "1"
 theme.border_normal                 = "#3F3F3F"
-theme.border_focus                  = "#7F7F7F"
+-- theme.border_focus                  = "#7F7F7F"
+theme.border_focus                  = purple40
 theme.border_marked                 = "#CC9393"
 theme.titlebar_bg_focus             = "#FFFFFF"
 theme.titlebar_bg_normal            = "#FFFFFF"
 theme.taglist_fg_focus              = "#D8D782"
 theme.tasklist_bg_focus             = "#1A1A1A"
 theme.tasklist_fg_focus             = "#D8D782"
+
 theme.textbox_widget_margin_top     = 1
 theme.notify_fg                     = theme.fg_normal
 theme.notify_bg                     = theme.bg_normal

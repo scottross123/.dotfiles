@@ -9,7 +9,6 @@ require("autorun")
 local keys = require("keys")
 
 local tasklist = require("widgets.tasklist")
-
 -- Standard awesome library
 local gears = require("gears")
 local awful = require("awful")
@@ -29,6 +28,46 @@ require("awful.hotkeys_popup.keys")
 -- Load Debian menu entries
 local debian = require("debian.menu")
 local has_fdo, freedesktop = pcall(require, "freedesktop")
+
+local vicious = require("vicious")
+
+local batwidget = wibox.widget.textbox()
+
+-- Create wibox with batwidget
+batbox = wibox.layout.margin(
+    wibox.widget { {
+        max_value = 1,
+        widget = batwidget,
+        border_width = 0.5,
+        border_color = "#000000",
+        color = {
+            type = "linear",
+            from = { 0, 0 },
+            to = { 0, 30 },
+            stops = { { 0, "#AECF96" },
+                { 1, "#FF5656" } }
+        }
+    },
+        forced_height = 10, forced_width = 8,
+        direction = 'east', color = beautiful.fg_widget,
+        layout = wibox.container.rotate },
+    1, 1, 3, 3)
+
+-- Register battery widget
+vicious.register(batwidget, vicious.widgets.bat, "BAT $2", 61, "BAT0")
+
+local hddtempwidget = wibox.widget.textbox()
+vicious.register(hddtempwidget, vicious.widgets.hddtemp, "${/dev/nvme0n1} °C", 19)
+
+
+cpuwidget = awful.widget.graph()
+cpuwidget:set_width(50)
+cpuwidget:set_background_color "#494B4F"
+cpuwidget:set_color { type = "linear", from = { 0, 0 }, to = { 50, 0 },
+    stops = { { 0, "#FF5656" },
+        { 0.5, "#88A175" },
+        { 1,   "#AECF96" } } }
+vicious.register(cpuwidget, vicious.widgets.cpu, "$1", 3)
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
@@ -250,29 +289,33 @@ awful.screen.connect_for_each_screen(function(s)
     -- Add widgets to the wibox
     s.mywibox:setup {
         layout = wibox.layout.align.horizontal,
+        expand = "none",
         {
             -- Left widgets
             layout = wibox.layout.fixed.horizontal,
+            spacing = 10,
             mylauncher,
             s.mytaglist,
             -- s.mypromptbox,
+            mytasklist
         },
-        mytasklist, -- Middle widget
+        -- mytasklist, -- Middle widget
+        mytextclock,
+        -- wibox.container.place([
         {
             -- Right widgets
             layout = wibox.layout.fixed.horizontal,
             -- mykeyboardlayout,
             wibox.widget.systray(),
-            volume_widget(),
-            battery_widget(),
-            mytextclock,
+            spacing = 10,
+            batwidget,
+            cpuwidget,
+            hddtempwidget,
+            -- volume_widget(),
             -- s.mylayoutbox,
         },
     }
 end)
-
--- }}}
-
 -- {{{ Rules
 -- Rules to apply to new clients (through the "manage" signal).
 awful.rules.rules = {
