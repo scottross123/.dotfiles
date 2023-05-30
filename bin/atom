@@ -1,0 +1,29 @@
+#!/bin/zsh
+
+VAULT_DIR="/home/scott/documents/vault"
+NAME="$(date +%Y-%m-%d_%H-%M-%S).md"
+
+while getopts ':m:n:' OPTION; do
+    case "$OPTION" in
+        m|message)
+            MESSAGE="$OPTARG"
+            ;;
+        n|name)
+            NAME="$OPTARG.md"
+            ;;
+        ?)
+            echo "Usage: $(basename $0) [-m argument] [-n argument]"
+        exit 1
+        ;;
+    esac
+done
+
+FILE_PATH="$VAULT_DIR/atoms/$NAME"
+
+if [ $MESSAGE ]; then
+    touch $FILE_PATH
+    echo "$MESSAGE" >> $FILE_PATH
+    exit
+fi
+
+$EDITOR $FILE_PATH
