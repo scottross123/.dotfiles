@@ -33,20 +33,11 @@ local vicious = require("vicious")
 local tasklist = require("widgets.tasklist")
 local bat0, bat1 = require("widgets.bat")
 local mem = require("widgets.mem")
+local cpu = require("widgets.cpu")
 
 local hddtempwidget = wibox.widget.textbox()
 
 vicious.register(hddtempwidget, vicious.widgets.hddtemp, "${/dev/nvme0n1} °C", 19)
-
-
-cpuwidget = awful.widget.graph()
-cpuwidget:set_width(50)
-cpuwidget:set_background_color "#494B4F"
-cpuwidget:set_color { type = "linear", from = { 0, 0 }, to = { 50, 0 },
-    stops = { { 0, "#FF5656" },
-        { 0.5, "#88A175" },
-        { 1,   "#AECF96" } } }
-vicious.register(cpuwidget, vicious.widgets.cpu, "$1", 3)
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
@@ -287,10 +278,10 @@ awful.screen.connect_for_each_screen(function(s)
             -- mykeyboardlayout,
             wibox.widget.systray(),
             spacing = 10,
+            mem,
+            cpu,
             bat1,
             bat0,
-            mem,
-            cpuwidget,
             -- hddtempwidget,
             -- volume_widget(),
             -- s.mylayoutbox,
