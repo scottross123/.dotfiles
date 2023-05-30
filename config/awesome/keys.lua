@@ -4,21 +4,58 @@ local volume_widget = require("widgets.volume-widget.volume")
 local hotkeys_popup = require("awful.hotkeys_popup")
 local menubar = require("menubar")
 
+local wibox = require("wibox")
+
 local terminal = "kitty"
 local modkey = "Mod4"
+
+
+local w = wibox {
+    bg = '#1e252c',
+    border_width = 1,
+    border_color = '#84bd00',
+    max_widget_size = 500,
+    ontop = true,
+    height = 50,
+    width = 250,
+    shape = function(cr, width, height)
+        gears.shape.rounded_rect(cr, width, height, 3)
+    end
+}
+
+w:setup {
+    {
+        {
+            widget = wibox.widget.imagebox,
+            resize = false
+        },
+        id = 'icon',
+        top = 9,
+        left = 10,
+        layout = wibox.container.margin
+    },
+    {
+        layout = wibox.container.margin,
+        left = 10,
+    },
+    id = 'left',
+    layout = wibox.layout.fixed.horizontal
+}
+
+
 
 local keys = {
     globalkeys = gears.table.join(
 
     -- keyboard volume, control, brightness control, etc
         awful.key({}, "XF86AudioRaiseVolume", function()
-            volume_widget:inc(5)
+            --volume_widget:inc(5)
         end),
         awful.key({}, "XF86AudioLowerVolume", function()
-            volume_widget:dec(5)
+            --volume_widget:dec(5)
         end),
         awful.key({}, "XF86AudioMute", function()
-            volume_widget:toggle()
+            --volume_widget:toggle()
         end),
 
         awful.key({}, "XF86MonBrightnessUp", function()
@@ -57,8 +94,8 @@ local keys = {
         --  { description = "show main menu", group = "awesome" }),
         --
         --  this doesn't work rn but i'll figure it out later
-        awful.key({ modkey, }, "w", function(c) c:kill() end,
-            { description = "close", group = "client" }),
+        --awful.key({ modkey, }, "w", function(c) c:kill() end,
+        --{ description = "close", group = "client" }),
 
         -- Layout manipulation
         awful.key({ modkey, "Shift" }, "j", function() awful.client.swap.byidx(1) end,
@@ -86,7 +123,7 @@ local keys = {
         awful.key({ modkey, "Control" }, "r", awesome.restart,
             { description = "reload awesome", group = "awesome" }),
         awful.key({ modkey, "Shift" }, "q", awesome.quit,
-             { description = "quit awesome", group = "awesome" }),
+            { description = "quit awesome", group = "awesome" }),
         awful.key({ modkey, }, "l", function() awful.tag.incmwfact(0.05) end,
             { description = "increase master width factor", group = "layout" }),
         awful.key({ modkey, }, "h", function() awful.tag.incmwfact(-0.05) end,
@@ -127,10 +164,41 @@ local keys = {
             end,
             { description = "run rofi ssh", group = "launcher" }),
 
+        awful.key({ modkey, }, "e", function()
+                awful.util.spawn('rofi -show window')
+            end,
+            { description = "run rofi window", group = "launcher" }),
+
         awful.key({ modkey }, "x",
             function()
+                -- awful.placement.top(w, { margins = {top = 40}, parent = awful.screen.focused()})
+                awful.popup {
+                    widget       = {
+                        {
+                            {
+                                text   = 'Execute lua code: ',
+                                widget = wibox.widget.textbox
+                            },
+                                                        {
+                                value         = 0.5,
+                                forced_height = 30,
+                                forced_width  = 100,
+                                widget        = wibox.widget.progressbar
+                            },
+                            layout = wibox.layout.fixed.vertical,
+                        },
+                        margins = 10,
+                        widget  = wibox.container.margin
+                    },
+                    border_width = 5,
+                    placement    = awful.placement.centered,
+                    shape        = gears.shape.rect,
+                    ontop = true,
+                    visible      = true,
+                }
                 awful.prompt.run {
                     prompt       = "Run Lua code: ",
+                    -- TODO make this a popup
                     textbox      = awful.screen.focused().mypromptbox.widget,
                     exe_callback = awful.util.eval,
                     history_path = awful.util.get_cache_dir() .. "/history_eval"
@@ -141,7 +209,6 @@ local keys = {
         awful.key({ modkey }, "p", function() menubar.show() end,
             { description = "show the menubar", group = "launcher" })
     ),
-
     clientkeys = gears.table.join(
         awful.key({ modkey, }, "f",
             function(c)
@@ -198,7 +265,6 @@ local keys = {
             awful.mouse.client.resize(c)
         end)
     ),
-
     mousebuttons = gears.table.join(
         awful.button({}, 3, function() mymainmenu:toggle() end),
         awful.button({}, 4, awful.tag.viewnext),

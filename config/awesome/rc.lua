@@ -8,7 +8,6 @@ require("autorun")
 
 local keys = require("keys")
 
-local tasklist = require("widgets.tasklist")
 -- Standard awesome library
 local gears = require("gears")
 local awful = require("awful")
@@ -31,32 +30,12 @@ local has_fdo, freedesktop = pcall(require, "freedesktop")
 
 local vicious = require("vicious")
 
-local batwidget = wibox.widget.textbox()
-
--- Create wibox with batwidget
-batbox = wibox.layout.margin(
-    wibox.widget { {
-        max_value = 1,
-        widget = batwidget,
-        border_width = 0.5,
-        border_color = "#000000",
-        color = {
-            type = "linear",
-            from = { 0, 0 },
-            to = { 0, 30 },
-            stops = { { 0, "#AECF96" },
-                { 1, "#FF5656" } }
-        }
-    },
-        forced_height = 10, forced_width = 8,
-        direction = 'east', color = beautiful.fg_widget,
-        layout = wibox.container.rotate },
-    1, 1, 3, 3)
-
--- Register battery widget
-vicious.register(batwidget, vicious.widgets.bat, "BAT $2", 61, "BAT0")
+local tasklist = require("widgets.tasklist")
+local bat0, bat1 = require("widgets.bat")
+local mem = require("widgets.mem")
 
 local hddtempwidget = wibox.widget.textbox()
+
 vicious.register(hddtempwidget, vicious.widgets.hddtemp, "${/dev/nvme0n1} °C", 19)
 
 
@@ -308,9 +287,11 @@ awful.screen.connect_for_each_screen(function(s)
             -- mykeyboardlayout,
             wibox.widget.systray(),
             spacing = 10,
-            batwidget,
+            bat1,
+            bat0,
+            mem,
             cpuwidget,
-            hddtempwidget,
+            -- hddtempwidget,
             -- volume_widget(),
             -- s.mylayoutbox,
         },
