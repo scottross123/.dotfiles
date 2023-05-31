@@ -2,4 +2,9 @@
 
 source /home/scott/.Xmodmap
 picom
-redshift
+
+REDSHIFT_PROCESS=$(ps aux | grep redshift)
+
+if [[ -z $REDSHIFT_PROCESS ]]; then
+	redshift
+fi
