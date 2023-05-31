@@ -50,12 +50,15 @@ local keys = {
     -- keyboard volume, control, brightness control, etc
         awful.key({}, "XF86AudioRaiseVolume", function()
             --volume_widget:inc(5)
+            awful.spawn.with_shell("amixer -q sset Master 5%+")
         end),
         awful.key({}, "XF86AudioLowerVolume", function()
             --volume_widget:dec(5)
+            awful.spawn.with_shell("amixer -q sset Master 5%-")
         end),
         awful.key({}, "XF86AudioMute", function()
             --volume_widget:toggle()
+            awful.spawn.with_shell("amixer -q sset Master toggle")
         end),
 
         awful.key({}, "XF86MonBrightnessUp", function()
