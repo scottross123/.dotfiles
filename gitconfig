@@ -3,6 +3,7 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+
 [user]
 	name = Scott Ross
 	email = 31601170+scottross123@users.noreply.github.com

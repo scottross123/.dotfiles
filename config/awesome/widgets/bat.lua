@@ -19,9 +19,8 @@ batbox = wibox.layout.margin(
     1, 1, 3, 3)
 
 -- Register battery widget
+vicious.register(bat1, vicious.widgets.bat, "BAT1 $2%", 61, "BAT1")
 vicious.register(bat0, vicious.widgets.bat, "BAT0 $2%", 61, "BAT0")
---vicious.register(bat1, vicious.widgets.bat, "BAT1 $2%", 61, "BAT1")
-
 return bat0, bat1
 
 -- https://vicious.readthedocs.io/en/latest/custom.html

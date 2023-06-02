@@ -34,6 +34,7 @@ local tasklist = require("widgets.tasklist")
 local bat0, bat1 = require("widgets.bat")
 local mem = require("widgets.mem")
 local cpu = require("widgets.cpu")
+local vol = require("widgets.vol")
 
 local hddtempwidget = wibox.widget.textbox()
 
@@ -148,17 +149,6 @@ mykeyboardlayout = awful.widget.keyboardlayout()
 -- {{{ Wibar
 -- Create a textclock widget
 mytextclock = wibox.widget.textclock()
-
--- streetturtle's awesome-wm widgets
-local battery_widget = require("widgets.battery-widget.battery")
-local volume_widget = require("widgets.volume-widget.volume")
--- bright doesn't work for some reason, idk. fix later or find different widget. or just don;t use it
---local brightness_widget = require("widgets.brightness-widget.brightness")
-local net_speed_widget = require("widgets.net-speed-widget.net-speed")
-local apt_widget = require("widgets.apt-widget.apt-widget")
-local cpu_widget = require("widgets.cpu-widget.cpu-widget")
-local ram_widget = require("widgets.ram-widget.ram-widget")
-local weather_widget = require("widgets.weather-widget.weather")
 
 -- Create a wibox for each screen and add it
 local taglist_buttons = gears.table.join(
@@ -282,6 +272,7 @@ awful.screen.connect_for_each_screen(function(s)
             cpu,
             bat1,
             bat0,
+            --vol,
             -- hddtempwidget,
             -- volume_widget(),
             -- s.mylayoutbox,

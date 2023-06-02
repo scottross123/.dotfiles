@@ -1,6 +1,9 @@
 # neovim instead of vim
 alias vim="nvim"
 
+# codium instead of code
+alias code="codium"
+
 # list
 alias ls='ls --color=auto'
 alias ll='ls -lAh --color=auto'
