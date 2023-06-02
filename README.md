@@ -1,16 +1,24 @@
 # .dotfiles
 
-config shit for mac
+Configs, dotfiles, and install scripts for Unix-like Systems (primarily GNU/Linux and MacOS. Hopefully FreeBSD too at some point)
+
+## Including but not limited to
 
 - zsh
 - nvim
 - kitty
-- etc
+- firefox
+- vscode+vscodium
+- awesomewm
+- yabai
+- vim
 
-**TODO** write an install script
+## TODO
+
+- actually write the install scripts
+- write different install secrets for each distro and just keep that one branch
+- update macOS config
 
 ## Notes
 
-- the version of nvim present in Bullseye does not work with my nvim config, need to use backports to get later version
-    - [keeping a mixed system](https://www.debian.org/doc/manuals/apt-howto/ch-apt-get.en.html#s-default-version)
-
+- nothing
