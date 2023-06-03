@@ -28,7 +28,6 @@ vim.opt.updatetime = 5
 
 vim.opt.colorcolumn = "80"
 
-vim.keymap.set('i', 'jj', '<Esc>', {})
 
 vim.cmd[[colorscheme default]]
 

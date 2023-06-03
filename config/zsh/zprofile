@@ -24,3 +24,6 @@ fi
 
 unset env
 
+# source key bindings
+source ~/.Xmodmap
+

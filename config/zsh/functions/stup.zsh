@@ -1,3 +1,5 @@
+# broken
+
 function stup {
     today=`date +%-m-%-d-%y`
     dir=~/Documents/Standup
