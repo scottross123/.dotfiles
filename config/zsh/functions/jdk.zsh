@@ -1,3 +1,5 @@
+# TODO test if this works on linux, if not then make it work on linux
+
 function jdk() {
     version=$1
     unset JAVA_HOME;
