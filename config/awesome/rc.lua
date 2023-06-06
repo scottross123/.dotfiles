@@ -31,7 +31,7 @@ local has_fdo, freedesktop = pcall(require, "freedesktop")
 local vicious = require("vicious")
 
 local tasklist = require("widgets.tasklist")
-local bat0, bat1 = require("widgets.bat")
+-- local bat0, bat1 = require("widgets.bat")
 local mem = require("widgets.mem")
 local cpu = require("widgets.cpu")
 local vol = require("widgets.vol")
@@ -270,8 +270,8 @@ awful.screen.connect_for_each_screen(function(s)
             spacing = 10,
             mem,
             cpu,
-            bat1,
-            bat0,
+            -- bat1,
+            -- bat0,
             --vol,
             -- hddtempwidget,
             -- volume_widget(),

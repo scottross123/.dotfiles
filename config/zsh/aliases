@@ -50,6 +50,10 @@ alias s="source ~/.config/zsh/.zshrc"
 # clear
 alias c="clear"
 
+# edit zsh config
+# TODO dotifiles should be an environemnt variable
+alias e="$EDITOR ~/.dotfiles/config/zsh"
+
 # trash instead of rm
 # alias rm="trash"
 
@@ -61,6 +65,7 @@ alias icat="kitty +kitten icat"
 alias d="kitty +kitten diff"
 
 # jump to note/vault dir
+# TODO have this be an enviornment variable please
 alias cdvault="cd ~/documents/vault"
 
 # use kitten if im using kitty for ssh

@@ -34,6 +34,7 @@ trash() {
         s | size)
             echo $size
             ;;
+        
 		\?)
 			echo "Invalid option: -$OPTARG" >&2
 			#display_usage
@@ -44,5 +45,7 @@ trash() {
 
     shift $((OPTIND - 1))
 
-	# mv $@ trash
+    if [ $OPTIND -eq 1 ]; then
+        mv "$@" trash
+    fi
 }
