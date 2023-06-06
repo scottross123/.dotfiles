@@ -17,7 +17,7 @@ then
 	echo "alright then, deleting"
 	rm -rf $HOME/.config
 	rm -rf $HOME/.vimrc
-	rm -rf $HOME/.gitconfig
+	# rm -rf $HOME/.gitconfig
 	rm -rf $HOME/.zshrc
 	rm -rf $HOME/.zshenv
 else
@@ -28,16 +28,16 @@ fi
 mkdir -p $HOME/.config
 ln -s $DOTFILES/vimrc $HOME/.vimrc
 echo "symlinked .vimrc in /home"
-ln -s $DOTFILES/gitconfig $HOME/.gitconfig	
-echo "symlinked .gitconfig in /home"
+# ln -s $DOTFILES/gitconfig $HOME/.gitconfig	
+# echo "symlinked .gitconfig in /home"
 ln -s $DOT_CONFIG/kitty $HOME_CONFIG/kitty
 echo "symlinked kitty in .config"
 ln -s $DOT_CONFIG/neofetch $HOME_CONFIG/neofetch
 echo "symlinked neofetch in .config"	
 ln -s $DOT_CONFIG/nvim $HOME_CONFIG/nvim
 echo "symlinked nvim in .config"	
-ln -s $DOTFILES/bin $HOME/.local/bin
-echo "symlinked bin folder"
+# ln -s $DOTFILES/bin $HOME/.local/bin
+# echo "symlinked bin folder"
 # vscode
 # firefox
 

@@ -39,7 +39,10 @@ alias gf="git fetch"
 alias gp="git pull"
 alias gfgp="git fetch && git pull"
 alias gpu="git push"
-
+alias grb="git rebase"
+alias gdiff="git diff"
+alias gl="git log"
+alias gm="git merge"
 # source
 alias s="source ~/.config/zsh/.zshrc" 
 
@@ -61,3 +64,6 @@ alias cdvault="cd ~/Documents/Personal"
 
 # use kitten if im using kitty for ssh
 [ "$TERM" = "xterm-kitty" ] && alias ssh="kitty +kitten ssh"
+
+# get firefox cli to work on macOS. i feel like there should be a better way to do this but whatever
+alias firefox="/Applications/Firefox.app/Contents/MacOS/firefox"

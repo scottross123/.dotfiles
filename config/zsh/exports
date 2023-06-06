@@ -1,3 +1,5 @@
 path+=('/home/scott/bin')
+path+=('/Users/sross/bin')
 path+=('/home/scott/.local/bin')
+path+=('/Users/sross/.local/bin')
 export PATH

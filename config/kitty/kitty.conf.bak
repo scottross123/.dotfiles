@@ -19,10 +19,10 @@
 #: heavy. Setting them manually is useful for font families that have
 #: many weight variants like Book, Medium, Thick, etc. For example::
 
-     font_family      BlexMono Nerd Font 
-     bold_font        BlexMono Nerd Font Bold
-     italic_font      BlexMono Nerd Font Italic
-     bold_italic_font BlexMono Nerd Font Bold Italic
+     font_family      JetBrainsMono Nerd Font Mono
+     bold_font        JetBrainsMono Nerd Font Mono ExtraBold
+     italic_font      JetBrainsMono Nerd Font Mono Italic
+     bold_italic_font JetBrainsMono Nerd Font Mono ExtraBold Italic
 
 font_size 16.0
 
@@ -1026,7 +1026,7 @@ map cmd+9 goto_tab 9
 
 #: The foreground and background colors.
 
-   background_opacity 0.8
+   background_opacity 1
 
 #: The opacity of the background. A number between zero and one, where
 #: one is opaque and zero is fully transparent. This will only work if
@@ -1646,7 +1646,7 @@ map cmd+9 goto_tab 9
 #: create mappings to launch a new tab in the current working
 #: directory without duplication::
 
-#:     map f1 launch_tab nvim
+:     map f1 launch_tab nvim
 #:     map f2 launch_tab emacs
 
 #: Similarly, to alias kitten invocation::
@@ -1813,9 +1813,7 @@ map cmd+9 goto_tab 9
 #::  You can open a new window with the current working directory set
 #::  to the working directory of the current window using::
 
-      #map ctrl+alt+enter launch --cwd=current
-
-      map ctrl+alt+enter new_window_with_cwd
+#::      map ctrl+alt+enter launch --cwd=current
 
 #::  You can open a new window that is allowed to control kitty via
 #::  the kitty remote control facility with launch --allow-remote-
@@ -1944,16 +1942,14 @@ map cmd+9 goto_tab 9
 #: Next tab
 
 # map kitty_mod+right next_tab
-map kitty_mod+] next_tab
 # map shift+cmd+]     next_tab
-map ctrl+tab        next_tab
+# map ctrl+tab        next_tab
 
 #: Previous tab
 
 # map kitty_mod+left previous_tab
-map kitty_mod+[ previous_tab
 # map shift+cmd+[    previous_tab
-map ctrl+shift+tab previous_tab
+# map ctrl+shift+tab previous_tab
 
 #: New tab
 
@@ -1988,6 +1984,7 @@ map ctrl+shift+tab previous_tab
 #: tab, and any number larger than the last tab being the last tab::
 
 #:     map ctrl+alt+1 goto_tab 1
+#:     map ctrl+alt+2 goto_tab 2
 
 #: Just as with new_window above, you can also pass the name of
 #: arbitrary commands to run when using new_tab and new_tab_with_cwd.
@@ -2130,7 +2127,7 @@ map ctrl+shift+tab previous_tab
 
 #: Show documentation
 
- map kitty_mod+f1 show_kitty_doc overview
+# map kitty_mod+f1 show_kitty_doc overview
 
 #: Toggle fullscreen
 
@@ -2152,7 +2149,7 @@ map ctrl+shift+tab previous_tab
 
 #: Edit config file
 
- map kitty_mod+f2 edit_config_file
+# map kitty_mod+f2 edit_config_file
 # map cmd+,        edit_config_file
 
 #: Open the kitty command shell
@@ -2220,7 +2217,7 @@ map ctrl+shift+tab previous_tab
 
 #: Reload kitty.conf
 
-map kitty_mod+f5 load_config_file
+# map kitty_mod+f5 load_config_file
 # map ctrl+cmd+,   load_config_file
 
 #::  Reload kitty.conf, applying any changes since the last time it
@@ -2300,58 +2297,3 @@ map kitty_mod+f5 load_config_file
 #: }}}
 
 #: }}}
-
-# theme
-# oxocarbon theme ported to kitty, https://github.com/hbjydev/oxocarbon-kitty
-# originally made by nyoom, https://github.com/nyoom-engineering/oxocarbon
-
-foreground #dde1e6
-background #161616
-selection_foreground #f2f4f8
-selection_background #525252
-
-cursor #f2f4f8
-cursor_text_color #393939
-
-url_color #ee5396
-url_style single
-
-active_border_color #ee5396
-inactive_border_color #ff7eb6
-
-bell_border_color #ee5396
-
-wayland_titlebar_color system
-macos_titlebar_color system
-
-active_tab_foreground #161616
-active_tab_background #ee5396
-inactive_tab_foreground #dde1e6
-inactive_tab_background #393939
-tab_bar_background #161616
-
-color0 #262626
-color8 #393939
-
-color1 #ff7eb6
-color9 #ff7eb6
-
-color2  #42be65
-color10 #42be65
-
-color3  #82cfff
-color11 #82cfff
-
-color4  #33b1ff
-color12 #33b1ff
-
-color5  #ee5396
-color13 #ee5396
-
-color6  #3ddbd9
-color14 #3ddbd9
-
-color7  #dde1e6
-color15 #ffffff
-
-# vim:ft=conf

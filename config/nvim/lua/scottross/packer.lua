@@ -7,7 +7,28 @@ return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
 
-    -- colors
+    -- dashboard
+    use {
+        'glepnir/dashboard-nvim',
+        event = 'VimEnter',
+        config = function()
+            require('dashboard').setup {
+                theme = 'hyper',
+                config = {
+                    -- header = { "bruh" }
+                },
+                preview = {
+                    command, -- preview command
+                    file_path, -- preview file path
+                    file_height, -- preview file height
+                    file_width, -- preview file width
+                },
+            }
+        end,
+        requires = { 'nvim-tree/nvim-web-devicons' }
+    }
+
+    -- themes
     use('drewtempelmeyer/palenight.vim')
     use('junegunn/seoul256.vim')
     -- use('metalelf0/base16-black-metal-scheme')
@@ -16,6 +37,12 @@ return require('packer').startup(function(use)
     use('dikiaap/minimalist')
     use('agude/vim-eldar')
     use('NLKNguyen/papercolor-theme')
+    use { 'nyoom-engineering/oxocarbon.nvim' }
+    use('RRethy/vim-illuminate')
+    use({
+        'rrethy/vim-hexokinase',
+        run = 'cd ~/.local/share/nvim/site/pack/packer/start/vim-hexokinase && make hexokinase'
+    })
 
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.0',
@@ -54,6 +81,7 @@ return require('packer').startup(function(use)
             { 'rafamadriz/friendly-snippets' },
         }
     }
+    use('jose-elias-alvarez/null-ls.nvim')
 
     use {
         "folke/trouble.nvim",
@@ -61,8 +89,8 @@ return require('packer').startup(function(use)
         config = function()
             require("trouble").setup {
                 icons = false,
-                fold_open = "v", -- icon used for open folds
-                fold_closed = ">", -- icon used for closed folds
+                fold_open = "v",      -- icon used for open folds
+                fold_closed = ">",    -- icon used for closed folds
                 indent_lines = false, -- add an indent guide below the fold icons
                 signs = {
                     -- icons / text used for a diagnostic
@@ -82,8 +110,12 @@ return require('packer').startup(function(use)
     -- markdown writting
     use('junegunn/goyo.vim')
     use('junegunn/limelight.vim')
-    use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install",
-        setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
+    use({
+        "iamcco/markdown-preview.nvim",
+        run = "cd app && npm install",
+        setup = function() vim.g.mkdp_filetypes = { "markdown" } end,
+        ft = { "markdown" },
+    })
     use('godlygeek/tabular')
     use('preservim/vim-markdown')
 

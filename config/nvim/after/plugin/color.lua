@@ -7,5 +7,5 @@ end
 
 -- colorMe();
 
-vim.cmd('colorscheme PaperColor')
+vim.cmd('colorscheme oxocarbon')
 
