@@ -46,6 +46,6 @@ trash() {
     shift $((OPTIND - 1))
 
     if [ $OPTIND -eq 1 ]; then
-        mv "$@" trash
+        mv "$@" $HOME/trash
     fi
 }

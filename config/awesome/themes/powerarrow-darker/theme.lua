@@ -26,12 +26,6 @@ if not awful.util.file_readable(themes .. themename .. "/theme.lua") then
 end
 themedir      = themes .. themename
 
-wallpaper1    = themedir .. "/wall.png"
-wallpaper2    = themedir .. "/background.png"
-wallpaper3    = sharedthemes .. "/zenburn/zenburn-background.png"
-wallpaper4    = sharedthemes .. "/default/background.png"
-wpscript      = home .. "/.wallpaper"
-
 if awful.util.file_readable(wallpaper1) then
   theme.wallpaper = wallpaper1
 elseif awful.util.file_readable(wallpaper2) then
@@ -44,15 +38,25 @@ else
   theme.wallpaper = wallpaper4
 end
 
+-- ibm dev color palette
+local blue60 = "#0F62FE"
+local black100 = "#000000"
+local white0 = "#FFFFFF"
+local cyan10 = "#E5F6FF"
+local coolgray10 = "#F2F4F8"
+local coolgray30 = "#C1C7CD"
+local cyan30 = "#82CFFF"
 local purple40 = "#BE95FF"
+local magenta40 = "#FF7EB6"
+local teal30 = "#3DDBD9"
 
 theme.tasklist_disable_task_name = true
 
-theme.font                          = "IBM Plex Mono"
-theme.fg_normal                     = "#DDDDFF"
+-- theme.font                          = "IBM Plex Mono"
+theme.fg_normal                     = white0
 theme.fg_focus                      = "#F0DFAF"
 theme.fg_urgent                     = "#CC9393"
-theme.bg_normal                     = "#1A1A1A"
+theme.bg_normal                     = "black100" .. "D9"
 theme.bg_focus                      = "#313131"
 theme.bg_urgent                     = "#1A1A1A"
 theme.border_width                  = "1"
@@ -116,7 +120,7 @@ theme.widget_vol_mute               = themedir .. "/icons/vol_mute.png"
 theme.widget_mail                   = themedir .. "/icons/mail.png"
 theme.widget_mail_on                = themedir .. "/icons/mail_on.png"
 
--- theme.tasklist_disable_icon         = true
+theme.tasklist_disable_icon         = false
 -- theme.tasklist_floating             = ""
 -- theme.tasklist_maximized_horizontal = ""
 -- theme.tasklist_maximized_vertical   = ""

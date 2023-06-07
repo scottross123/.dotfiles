@@ -1,10 +1,21 @@
 #!/bin/sh
 
-source /home/scott/.Xmodmap
-picom
+run() {
+  if ! pgrep -f "$1" ;
+  then
+    "$@"&
+  fi
+}
 
-REDSHIFT_PROCESS=$(ps aux | grep redshift)
+redshifty () {
+    REDSHIFT_PROCESS=$(ps aux | grep redshift)
 
-if [[ -z $REDSHIFT_PROCESS ]]; then
-	redshift
-fi
+    if [[ -z $REDSHIFT_PROCESS ]]; then
+        redshift
+    fi
+}
+
+run source /home/scott/.Xmodmap
+run picom
+run redshifty
+

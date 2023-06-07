@@ -1,6 +1,5 @@
 local gears = require("gears")
 local awful = require("awful")
-local volume_widget = require("widgets.volume-widget.volume")
 local hotkeys_popup = require("awful.hotkeys_popup")
 local menubar = require("menubar")
 
@@ -8,7 +7,6 @@ local wibox = require("wibox")
 
 local terminal = "kitty"
 local modkey = "Mod4"
-
 
 local w = wibox {
     bg = '#1e252c',
@@ -42,8 +40,6 @@ w:setup {
     layout = wibox.layout.fixed.horizontal
 }
 
-
-
 local keys = {
     globalkeys = gears.table.join(
 
@@ -63,12 +59,12 @@ local keys = {
 
         awful.key({}, "XF86MonBrightnessUp", function()
             --brightness_widget:inc()
-            awful.spawn.with_shell("brightnessctl set 10%+")
+            awful.spawn.with_shell("brightnessctl set 5%+")
         end),
 
         awful.key({}, "XF86MonBrightnessDown", function()
             --brightness_widget:dec()
-            awful.spawn.with_shell("brightnessctl set 10%-")
+            awful.spawn.with_shell("brightnessctl set 5%-")
         end),
 
         awful.key({ modkey, }, "s", hotkeys_popup.show_help,
@@ -93,9 +89,6 @@ local keys = {
             { description = "focus previous by index", group = "client" }
         ),
 
-        -- awful.key({ modkey, }, "w", function() mymainmenu:show() end,
-        --  { description = "show main menu", group = "awesome" }),
-        --
         --  this doesn't work rn but i'll figure it out later
         --awful.key({ modkey, }, "w", function(c) c:kill() end,
         --{ description = "close", group = "client" }),
@@ -321,7 +314,6 @@ for i = 1, 9 do
             { description = "toggle focused client on tag #" .. i, group = "tag" })
     )
 end
-
 
 root.keys(keys.globalkeys)
 root.buttons(keys.mousebuttons)
