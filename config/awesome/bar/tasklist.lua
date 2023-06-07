@@ -1,6 +1,6 @@
 local awful = require("awful")
 local wibox = require("wibox")
-local tasklist_buttons = require("tasklist_buttons")
+local tasklist_buttons = require("bar.tasklist_buttons")
 
 local tasklist = {
     init = function(s)
