@@ -8,40 +8,22 @@ local wibox = require("wibox")
 local terminal = "kitty"
 local modkey = "Mod4"
 
-local w = wibox {
-    bg = '#1e252c',
-    border_width = 1,
-    border_color = '#84bd00',
-    max_widget_size = 500,
-    ontop = true,
-    height = 50,
-    width = 250,
-    shape = function(cr, width, height)
-        gears.shape.rounded_rect(cr, width, height, 3)
-    end
-}
-
-w:setup {
-    {
-        {
-            widget = wibox.widget.imagebox,
-            resize = false
-        },
-        id = 'icon',
-        top = 9,
-        left = 10,
-        layout = wibox.container.margin
-    },
-    {
-        layout = wibox.container.margin,
-        left = 10,
-    },
-    id = 'left',
-    layout = wibox.layout.fixed.horizontal
-}
-
 local keys = {
+    -- screenshots
     globalkeys = gears.table.join(
+        awful.key({ }, "Print", function () awful.util.spawn("scrot -s") end),
+
+awful.key({ modkey }, "Print", function () awful.util.spawn("scrot") end),
+
+    -- media controls
+    -- TODO i cant figure out what to map these to
+   -- awful.key({}, "Up", function()
+     -- awful.util.spawn("playerctl play", false) end),
+   --awful.key({}, "Right", function()
+     --awful.util.spawn("playerctl next", false) end),
+   --awful.key({}, "Left", function()
+     --awful.util.spawn("playerctl previous", false) end),
+
 
     -- keyboard volume, control, brightness control, etc
         awful.key({}, "XF86AudioRaiseVolume", function()
