@@ -39,12 +39,6 @@ local terminal = "kitty"
 local editor = os.getenv("EDITOR") or "nvim"
 local editor_cmd = terminal .. " -e " .. editor
 
-local modkey = "Mod4"
-
-local naughty = require("naughty")
-naughty.notify({
-    text=beautiful.font
-})
 -- Table of layouts to cover with awful.layout.inc, order matters.
 awful.layout.layouts = layouts
 
@@ -82,7 +76,4 @@ mylauncher = awful.widget.launcher({
 
 menubar.utils.terminal = terminal -- Set the terminal for applications that require it
 mykeyboardlayout = awful.widget.keyboardlayout()
-mytextclock = wibox.widget.textclock()
 awful.rules.rules = rules
--- client.connect_signal("focus", function(c) c.border_color = "#FFFFFF" end)
--- client.connect_signal("unfocus", function(c) c.border_color = "#FFDDFF" end)

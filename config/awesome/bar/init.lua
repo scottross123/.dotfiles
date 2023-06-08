@@ -3,18 +3,19 @@ local set_wallpaper = require("set_wallpaper")
 local gears = require("gears")
 local wibox = require("wibox")
 local tasklist = require("bar.tasklist")
-local taglist_buttons = require("bar.taglist_buttons")
+local taglist = require("bar.taglist")
 
 -- widgets
--- local bat0, bat1 = require("widgets.bat")
+local bat0, bat1 = require("bar.widgets.bat")
 local mem = require("bar.widgets.mem")
 local cpu = require("bar.widgets.cpu")
 local vol = require("bar.widgets.vol")
+local date = require("bar.widgets.date")
 
 awful.screen.connect_for_each_screen(function(s)
     set_wallpaper(s)
 
-    local names = { "1", "2", "3", "4", "5", "6", }
+    local names = { "term", "web", "office", "mail", "music", "games", "*" }
     local l = awful.layout.suit
     local layouts = { l.tile, l.tile, l.tile, l.tile, l.floating, l.floating, l.floating }
     awful.tag(names, s, layouts)
@@ -29,13 +30,8 @@ awful.screen.connect_for_each_screen(function(s)
         awful.button({}, 3, function() awful.layout.inc(-1) end),
         awful.button({}, 4, function() awful.layout.inc(1) end),
         awful.button({}, 5, function() awful.layout.inc(-1) end)))
-    -- Create a taglist widget
-    s.mytaglist = awful.widget.taglist {
-        screen  = s,
-        filter  = awful.widget.taglist.filter.all,
-        buttons = taglist_buttons
-    }
 
+    local mytaglist = taglist.init(s)
     local mytasklist = tasklist.init(s)
 
     -- Create the wibox
@@ -44,7 +40,7 @@ awful.screen.connect_for_each_screen(function(s)
         screen = s,
         type = "desktop",
         height = 20,
-        -- bg = beautiful.bg_normal .. "55"
+        opacity = .8
     })
 
     -- Add widgets to the wibox
@@ -55,12 +51,10 @@ awful.screen.connect_for_each_screen(function(s)
             layout = wibox.layout.fixed.horizontal,
             spacing = 10,
             mylauncher,
-            s.mytaglist,
+            mytaglist,
             -- s.mypromptbox,
         },
         mytasklist,
-        -- mytasklist, -- Middle widget
-        -- wibox.container.place([
         {
             -- Right widgets
             layout = wibox.layout.fixed.horizontal,
@@ -69,13 +63,12 @@ awful.screen.connect_for_each_screen(function(s)
             spacing = 10,
             mem,
             cpu,
-            -- bat1,
-            -- bat0,
-            --vol,
+            bat1,
+            bat0,
+            -- vol,
             -- hddtempwidget,
-            -- volume_widget(),
             -- s.mylayoutbox,
-            mytextclock,
+            date,
         },
     }
 end)

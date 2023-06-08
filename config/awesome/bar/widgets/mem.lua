@@ -3,6 +3,6 @@ local vicious = require("vicious")
 
 mem = wibox.widget.textbox()
 vicious.cache(vicious.widgets.mem)
-vicious.register(mem, vicious.widgets.mem, "MEM $1%", 13)
+vicious.register(mem, vicious.widgets.mem, "mem $1%", 13)
 
 return mem

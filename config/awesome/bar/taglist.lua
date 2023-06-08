@@ -1,8 +1,8 @@
 local awful = require("awful")
+local wibox = require("wibox")
 local gears = require("gears")
 require("globals")
 
--- Create a wibox for each screen and add it
 local taglist_buttons = gears.table.join(
     awful.button({}, 1, function(t) t:view_only() end),
     awful.button({ modkey }, 1, function(t)
@@ -20,4 +20,20 @@ local taglist_buttons = gears.table.join(
     awful.button({}, 5, function(t) awful.tag.viewprev(t.screen) end)
 )
 
-return taglist_buttons
+
+local taglist = {
+    init = function(s)
+        local widget = awful.widget.taglist {
+            screen  = s,
+            filter  = awful.widget.taglist.filter.all,
+            buttons = taglist_buttons
+        }
+
+        return wibox.widget {
+            widget,
+            widget = wibox.container.background
+        }
+    end
+}
+
+return taglist
