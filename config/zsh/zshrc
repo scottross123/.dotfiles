@@ -54,3 +54,5 @@ bindkey '^e' edit-command-line
 
 # TODO enable this once i get to not show up when i have 0 tasks
 # pending_tasks
+    
+precmd () {print -Pn "\e]0;%~\a"}
