@@ -29,3 +29,8 @@ yarn() {
     yarn "$@"
 }
 
+nx() {
+    unset -f nx
+    load_nvm
+    nx "$@"
+}

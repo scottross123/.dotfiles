@@ -52,4 +52,11 @@ if [ -f '/Users/sross/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/sross/goo
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/sross/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/sross/google-cloud-sdk/completion.zsh.inc'; fi
 
-# lazy load nvm so zsh doesn't take forever to startup
+# source github token secret
+# TODO move this into function
+source $HOME/.gh_token
+
+# nvm
+#export NVM_DIR="$HOME/.nvm"
+#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+#[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"

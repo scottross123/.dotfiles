@@ -39,10 +39,12 @@ return require('packer').startup(function(use)
     use('NLKNguyen/papercolor-theme')
     use { 'nyoom-engineering/oxocarbon.nvim' }
     use('RRethy/vim-illuminate')
+    --[[
     use({
         'rrethy/vim-hexokinase',
         run = 'cd ~/.local/share/nvim/site/pack/packer/start/vim-hexokinase && make hexokinase'
     })
+    ]]--
 
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.0',
