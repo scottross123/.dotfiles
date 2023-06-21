@@ -80,3 +80,6 @@ alias logout="pkill -KILL -u $(whoami)"
 # linux pbcopy and pbpaste
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
+
+# apt update
+alias aptup="sudo apt-get update && sudo apt-get update"

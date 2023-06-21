@@ -33,5 +33,5 @@ autoload -U colors && colors
 
 # format our main prompt for hostname current folder, and permissions.
 #PROMPT="%B%{$fg[green]%}%T %{$fg[blue]%}%n@%{$fg[blue]%}%m %(?:%{$fg_bold[green]%}> :%{$fg_bold[red]%}> )%{$fg[cyan]%}%c%{$reset_color%}"
-PROMPT="%{$fg[blue]%}[%n@%m] %1~ %{$fg[yellow]%}%% %{$reset_color%}"
+PROMPT="%{$fg[blue]%}[%n@%m] ${fg[magenta]%}%1~ %{$fg[yellow]%}%% %{$reset_color%}"
 # PROMPT+="\$vcs_info_msg_0_"
