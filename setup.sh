@@ -81,7 +81,7 @@ setup() {
 	#fi
 
 	link_config
-	install_software $os
+	#install_software $os
 	zsh_setup	
 }
 
