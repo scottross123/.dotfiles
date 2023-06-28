@@ -34,3 +34,9 @@ nx() {
     load_nvm
     nx "$@"
 }
+
+npx() {
+    unset -f npx
+    load_nvm
+    npx "$@"
+}
