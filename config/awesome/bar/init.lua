@@ -15,7 +15,8 @@ local date = require("bar.widgets.date")
 awful.screen.connect_for_each_screen(function(s)
     set_wallpaper(s)
 
-    local names = { "term", "web", "office", "mail", "music", "games", "*" }
+    -- local names = { "term", "web", "office", "mail", "music", "games", "*" }
+    local names = { "1", "2", "3", "4", "5", "6", "7" }
     local l = awful.layout.suit
     local layouts = { l.tile, l.tile, l.tile, l.tile, l.floating, l.floating, l.floating }
     awful.tag(names, s, layouts)
@@ -40,7 +41,7 @@ awful.screen.connect_for_each_screen(function(s)
         screen = s,
         type = "desktop",
         height = 20,
-        opacity = .8
+        -- opacity = .8
     })
 
     -- Add widgets to the wibox

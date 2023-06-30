@@ -11,21 +11,36 @@ local modkey = "Mod4"
 local keys = {
     -- screenshots
     globalkeys = gears.table.join(
-        awful.key({ }, "Print", function () awful.util.spawn("scrot -s") end),
 
-awful.key({ modkey }, "Print", function () awful.util.spawn("scrot") end),
+    -- hide wibar
+        awful.key({ modkey }, "b",
+            function()
+                local screen = awful.screen.focused()
+                screen.wb.visible = not screen.wb.visible
+            end,
+            { description = "toggle statusbar" }
+        ),
 
-    -- media controls
-    -- TODO i cant figure out what to map these to
-   -- awful.key({}, "Up", function()
-     -- awful.util.spawn("playerctl play", false) end),
-   --awful.key({}, "Right", function()
-     --awful.util.spawn("playerctl next", false) end),
-   --awful.key({}, "Left", function()
-     --awful.util.spawn("playerctl previous", false) end),
+        awful.key({}, "Print", function() awful.util.spawn("scrot -s") end),
+        awful.key({ modkey }, "Print", function() awful.util.spawn("scrot") end),
+
+        -- media controls
+        -- uses numpad arrow keys
+        awful.key({ modkey }, "KP_Up", function()
+            awful.util.spawn("playerctl play", false)
+        end),
+        awful.key({ modkey }, "KP_Down", function()
+            awful.util.spawn("playerctl pause", false)
+        end),
+        awful.key({ modkey }, "KP_Right", function()
+            awful.util.spawn("playerctl next", false)
+        end),
+        awful.key({ modkey }, "KP_Left", function()
+            awful.util.spawn("playerctl previous", false)
+        end),
 
 
-    -- keyboard volume, control, brightness control, etc
+        -- keyboard volume, control, brightness control, etc
         awful.key({}, "XF86AudioRaiseVolume", function()
             --volume_widget:inc(5)
             awful.spawn.with_shell("amixer -q sset Master 5%+")
@@ -41,12 +56,12 @@ awful.key({ modkey }, "Print", function () awful.util.spawn("scrot") end),
 
         awful.key({}, "XF86MonBrightnessUp", function()
             --brightness_widget:inc()
-            awful.spawn.with_shell("brightnessctl set 5%+")
+            awful.spawn.with_shell("brightnessctl set 10%+")
         end),
 
         awful.key({}, "XF86MonBrightnessDown", function()
             --brightness_widget:dec()
-            awful.spawn.with_shell("brightnessctl set 5%-")
+            awful.spawn.with_shell("brightnessctl set 10%-")
         end),
 
         awful.key({ modkey, }, "s", hotkeys_popup.show_help,
@@ -132,12 +147,17 @@ awful.key({ modkey }, "Print", function () awful.util.spawn("scrot") end),
             { description = "restore minimized", group = "client" }),
 
         -- rofi
-        awful.key({ modkey }, "r", function()
+        awful.key({ modkey, "Shift" }, "r", function()
+                awful.util.spawn('rofi -show run')
+            end,
+            { description = "run rofi", group = "launcher" }),
+        awful.key({ modkey, }, "r", function()
                 awful.util.spawn('rofi -show drun')
             end,
             { description = "run rofi", group = "launcher" }),
 
-        awful.key({ modkey, "Shift" }, "r", function()
+
+        awful.key({ modkey, "Shift" }, "s", function()
                 awful.util.spawn('rofi -show ssh')
             end,
             { description = "run rofi ssh", group = "launcher" }),
@@ -157,7 +177,7 @@ awful.key({ modkey }, "Print", function () awful.util.spawn("scrot") end),
                                 text   = 'Execute lua code: ',
                                 widget = wibox.widget.textbox
                             },
-                                                        {
+                            {
                                 value         = 0.5,
                                 forced_height = 30,
                                 forced_width  = 100,
@@ -171,7 +191,7 @@ awful.key({ modkey }, "Print", function () awful.util.spawn("scrot") end),
                     border_width = 5,
                     placement    = awful.placement.centered,
                     shape        = gears.shape.rect,
-                    ontop = true,
+                    ontop        = true,
                     visible      = true,
                 }
                 awful.prompt.run {

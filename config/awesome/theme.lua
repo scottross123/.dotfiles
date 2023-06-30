@@ -28,7 +28,7 @@ theme.tasklist_disable_icon = true
 
 theme.font = "BlexMonoMedm Nerd Font"
 
-theme.useless_gap = 4
+-- theme.useless_gap = 4
 -- theme.font                          = "IBM Plex Mono"
 theme.fg_normal                     = white0
 theme.fg_focus                      = "#F0DFAF"
@@ -53,8 +53,6 @@ theme.taglist_bg_focus             = coolgray100
 theme.tasklist_fg_focus             = magenta40
 theme.tasklist_bg_focus             = coolgray100
 
-
-
 theme.textbox_widget_margin_top     = 1
 theme.notify_fg                     = theme.fg_normal
 theme.notify_bg                     = theme.bg_normal
@@ -67,5 +65,5 @@ theme.menu_width                    = "140"
 
 beautiful.init(theme)
 
-gears.wallpaper.maximized(wallpaper_dir .. "/wallpaper.jpg", s)
+gears.wallpaper.maximized(wallpaper_dir .. "/wallpaper2.jpg", s)
 
