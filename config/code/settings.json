@@ -1,0 +1,76 @@
+{
+	"workbench.colorTheme": "oxocarbon",
+	"telemetry.telemetryLevel": "off",
+	"vim.vimrc.enable": true,
+	"security.workspace.trust.untrustedFiles": "open",
+	"editor.lineNumbers": "on",
+	// "terminal.integrated.automationProfile.osx": {
+	// },
+	"terminal.integrated.profiles.osx": {
+		"zsh": {
+			"path": "/bin/zsh",
+			"args": ["-l", "-i"]
+		}
+	},
+	"editor.glyphMargin": true,
+	"workbench.editor.enablePreview": false,
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": true,
+		"source.organizeImports": true,
+		"addMissingImports": true
+	},
+	"editor.fontFamily": "BlexMono Nerd Font",
+	"editor.fontLigatures": true,
+	"workbench.iconTheme": "vscode-icons",
+	"editor.formatOnSave": true,
+	"typescript.updateImportsOnFileMove.enabled": "always",
+	"javascript.updateImportsOnFileMove.enabled": "always",
+	"explorer.confirmDelete": false,
+	"[typescript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"prettier.useTabs": true,
+	"prettier.tabWidth": 4,
+	"vim.vimrc.path": "$HOME/.vimrc",
+	"[json]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[java]": {
+		"editor.tabSize": 4
+	},
+	"editor.minimap.enabled": false,
+	"workbench.sideBar.location": "right",
+	"workbench.activityBar.visible": false,
+	"workbench.layoutControl.enabled": false,
+	"editor.renderWhitespace": "all",
+	"workbench.editor.limit.enabled": true,
+	"workbench.editor.limit.excludeDirty": true,
+	"workbench.editor.limit.perEditorGroup": true,
+	"workbench.editor.showTabs": false,
+	"workbench.editor.limit.value": 3,
+	"java.import.gradle.java.home": "/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home",
+	"java.imports.gradle.wrapper.checksums": [
+		{
+			"sha256": "7321a8f71f0f779cfa6eba9c683d5f7150bdac48a31eab026c4e5a41b9f2680c",
+			"allowed": true
+		},
+		{
+			"sha256": "e996d452d2645e70c01c11143ca2d3742734a28da2bf61f25c82bdc288c9e637",
+			"allowed": true
+		},
+		{
+			"sha256": "10b4ace17870d2961528e20d793ddb116a1d46b99ce7d85aae46873728ce8f69",
+			"allowed": true
+		},
+		{
+			"sha256": "aec58bc0de12ad8f188575bb025afba9528bf85051198215a4e27e66c1ea326b",
+			"allowed": true
+		}
+	],
+	"editor.tabSize": 2,
+	"vsicons.dontShowNewVersionMessage": true,
+	"git.openRepositoryInParentFolders": "always",
+	"search.useIgnoreFiles": false,
+	"workbench.editor.untitled.hint": "hidden",
+	"window.zoomLevel": 2
+}
