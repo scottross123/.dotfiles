@@ -26,16 +26,16 @@ local keys = {
 
         -- media controls
         -- uses numpad arrow keys
-        awful.key({ modkey }, "KP_Up", function()
+        awful.key({ "Mod1" }, "KP_Up", function()
             awful.util.spawn("playerctl play", false)
         end),
-        awful.key({ modkey }, "KP_Down", function()
+        awful.key({ "Mod1" }, "KP_Down", function()
             awful.util.spawn("playerctl pause", false)
         end),
-        awful.key({ modkey }, "KP_Right", function()
+        awful.key({ "Mod1" }, "KP_Right", function()
             awful.util.spawn("playerctl next", false)
         end),
-        awful.key({ modkey }, "KP_Left", function()
+        awful.key({ "Mod1" }, "KP_Left", function()
             awful.util.spawn("playerctl previous", false)
         end),
 
@@ -86,9 +86,8 @@ local keys = {
             { description = "focus previous by index", group = "client" }
         ),
 
-        --  this doesn't work rn but i'll figure it out later
-        --awful.key({ modkey, }, "w", function(c) c:kill() end,
-        --{ description = "close", group = "client" }),
+        awful.key({ modkey, }, "w", function() mymainmenu:show() end,
+            { description = "show main menu", group = "awesome" }),
 
         -- Layout manipulation
         awful.key({ modkey, "Shift" }, "j", function() awful.client.swap.byidx(1) end,
@@ -129,7 +128,8 @@ local keys = {
             { description = "increase the number of columns", group = "layout" }),
         awful.key({ modkey, "Control" }, "l", function() awful.tag.incncol(-1, nil, true) end,
             { description = "decrease the number of columns", group = "layout" }),
-        awful.key({ modkey, }, "space", function() awful.layout.inc(1) end,
+            -- TODO figure out what to change this too
+        awful.key({ modkey, "Mod1" }, "space", function() awful.layout.inc(1) end,
             { description = "select next", group = "layout" }),
         awful.key({ modkey, "Shift" }, "space", function() awful.layout.inc(-1) end,
             { description = "select previous", group = "layout" }),
@@ -147,11 +147,11 @@ local keys = {
             { description = "restore minimized", group = "client" }),
 
         -- rofi
-        awful.key({ modkey, "Shift" }, "r", function()
+        awful.key({ modkey, }, "r", function()
                 awful.util.spawn('rofi -show run')
             end,
             { description = "run rofi", group = "launcher" }),
-        awful.key({ modkey, }, "r", function()
+        awful.key({ modkey, }, "space", function()
                 awful.util.spawn('rofi -show drun')
             end,
             { description = "run rofi", group = "launcher" }),
@@ -202,10 +202,11 @@ local keys = {
                     history_path = awful.util.get_cache_dir() .. "/history_eval"
                 }
             end,
-            { description = "lua execute prompt", group = "awesome" }),
+            { description = "lua execute prompt", group = "awesome" })
         -- Menubar
-        awful.key({ modkey }, "p", function() menubar.show() end,
-            { description = "show the menubar", group = "launcher" })
+        -- no menubar
+        --awful.key({ modkey }, "p", function() menubar.show() end,
+             -- { description = "show the menubar", group = "launcher" })
     ),
     clientkeys = gears.table.join(
         awful.key({ modkey, }, "f",

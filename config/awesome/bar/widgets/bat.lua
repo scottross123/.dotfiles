@@ -2,23 +2,14 @@ local vicious = require("vicious")
 local beautiful = require("beautiful")
 local wibox = require("wibox")
 
-bat0 = wibox.widget.textbox()
-
--- Create wibox with batwidget
-batbox = wibox.layout.margin(
-    wibox.widget { {
-        max_value = 1,
-        widget = wibox.widget.textbox(),
-    },
-        direction = 'east', color = beautiful.fg_widget,
-        layout = wibox.container.rotate },
-    1, 1, 3, 3)
+local bat = wibox.widget.textbox()
 
 -- Register battery widget
 -- vicious.register(bat1, vicious.widgets.bat, "BAT1 $2%", 61, "BAT1")
 -- idk why the fuck the second battery widget doesnt work
-vicious.register(bat0, vicious.widgets.bat, "bat0 $2%", 61, "BAT1")
+--  TODO figure this out later
+vicious.register(bat, vicious.widgets.bat, "bat $2%", 61, "BAT0")
 
-return bat0
+return bat
 
 -- https://vicious.readthedocs.io/en/latest/custom.html

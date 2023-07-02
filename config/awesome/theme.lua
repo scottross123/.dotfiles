@@ -3,6 +3,7 @@ local gears = require("gears")
 
 local wallpaper_dir ="/home/scott/.config/awesome/wallpapers"
 
+
 local theme = {}
 
 -- ibm dev color palette
@@ -62,6 +63,25 @@ theme.awful_widget_margin_top       = 2
 theme.mouse_finder_color            = "#CC9393"
 theme.menu_height                   = "16"
 theme.menu_width                    = "140"
+
+-- TODO fix this
+local icons_dir = "/home/scott/.dotfiles/config/awesome"
+
+theme.layout_tile                   = icons_dir .. "/icons/layouts/tile.png"
+theme.layout_tilegaps               = icons_dir .. "/icons/layouts/tilegaps.png"
+theme.layout_tileleft               = icons_dir .. "/icons/layouts/tileleft.png"
+theme.layout_tilebottom             = icons_dir .. "/icons/layouts/tilebottom.png"
+theme.layout_tiletop                = icons_dir .. "/icons/layouts/tiletop.png"
+theme.layout_fairv                  = icons_dir .. "/icons/layouts/fairv.png"
+theme.layout_fairh                  = icons_dir .. "/icons/layouts/fairh.png"
+theme.layout_spiral                 = icons_dir .. "/icons/layouts/spiral.png"
+theme.layout_dwindle                = icons_dir .. "/icons/layouts/dwindle.png"
+theme.layout_max                    = icons_dir .. "/icons/layouts/max.png"
+theme.layout_fullscreen             = icons_dir .. "/icons/layouts/fullscreen.png"
+theme.layout_magnifier              = icons_dir .. "/icons/layouts/magnifier.png"
+theme.layout_floating               = icons_dir .. "/icons/layouts/floating.png"
+
+
 
 beautiful.init(theme)
 

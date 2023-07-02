@@ -11,6 +11,7 @@ local mem = require("bar.widgets.mem")
 local cpu = require("bar.widgets.cpu")
 local vol = require("bar.widgets.vol")
 local date = require("bar.widgets.date")
+local net = require("bar.widgets.net")
 
 awful.screen.connect_for_each_screen(function(s)
     set_wallpaper(s)
@@ -62,14 +63,15 @@ awful.screen.connect_for_each_screen(function(s)
             -- mykeyboardlayout,
             wibox.widget.systray(),
             spacing = 10,
+            net,
             mem,
             cpu,
             bat1,
             bat0,
-            -- vol,
+            vol,
             -- hddtempwidget,
-            -- s.mylayoutbox,
             date,
+            -- s.mylayoutbox,
         },
     }
 end)
