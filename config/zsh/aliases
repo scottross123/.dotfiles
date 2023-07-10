@@ -40,9 +40,11 @@ alias gp="git pull"
 alias gfgp="git fetch && git pull"
 alias gpu="git push"
 alias grb="git rebase"
-alias gdiff="git diff"
+alias gdf="git diff"
 alias gl="git log"
 alias gm="git merge"
+alias gdfs="git diff --compact-summary"
+
 # source
 alias s="source ~/.config/zsh/.zshrc" 
 
@@ -67,3 +69,7 @@ alias cdvault="cd ~/Documents/Personal"
 
 # get firefox cli to work on macOS. i feel like there should be a better way to do this but whatever
 alias firefox="/Applications/Firefox.app/Contents/MacOS/firefox"
+
+# local docs cli, TODO move into separate alias file
+alias lcli=/Users/sross/Developer/Bitbucket/documentation-portal/dist/apps/cli/bin/docs.js
+

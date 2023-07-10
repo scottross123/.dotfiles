@@ -240,7 +240,7 @@ _G.packer_plugins = {
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
   ["trouble.nvim"] = {
-    config = { "\27LJ\2\nÆ\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\2B\0\2\1K\0\1\0\nsigns\1\0\4\fwarning\twarn\16information\tinfo\nerror\nerror\thint\thint\1\0\5\14fold_open\6v\nicons\1\25use_diagnostic_signs\1\17indent_lines\1\16fold_closed\6>\nsetup\ftrouble\frequire\0" },
+    config = { "\27LJ\2\nÆ\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\2B\0\2\1K\0\1\0\nsigns\1\0\4\fwarning\twarn\nerror\nerror\thint\thint\16information\tinfo\1\0\5\16fold_closed\6>\17indent_lines\1\25use_diagnostic_signs\1\nicons\1\14fold_open\6v\nsetup\ftrouble\frequire\0" },
     loaded = true,
     path = "/Users/sross/.local/share/nvim/site/pack/packer/start/trouble.nvim",
     url = "https://github.com/folke/trouble.nvim"
@@ -249,6 +249,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/sross/.local/share/nvim/site/pack/packer/start/undotree",
     url = "https://github.com/mbbill/undotree"
+  },
+  vim = {
+    loaded = true,
+    path = "/Users/sross/.local/share/nvim/site/pack/packer/start/vim",
+    url = "https://github.com/dracula/vim"
   },
   ["vim-airline"] = {
     loaded = true,
@@ -289,7 +294,7 @@ try_loadstring("\27LJ\2\n=\0\0\2\0\4\0\0056\0\0\0009\0\1\0005\1\3\0=\1\2\0K\0\1\
 time([[Setup for markdown-preview.nvim]], false)
 -- Config for: trouble.nvim
 time([[Config for trouble.nvim]], true)
-try_loadstring("\27LJ\2\nÆ\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\2B\0\2\1K\0\1\0\nsigns\1\0\4\fwarning\twarn\16information\tinfo\nerror\nerror\thint\thint\1\0\5\14fold_open\6v\nicons\1\25use_diagnostic_signs\1\17indent_lines\1\16fold_closed\6>\nsetup\ftrouble\frequire\0", "config", "trouble.nvim")
+try_loadstring("\27LJ\2\nÆ\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\2B\0\2\1K\0\1\0\nsigns\1\0\4\fwarning\twarn\nerror\nerror\thint\thint\16information\tinfo\1\0\5\16fold_closed\6>\17indent_lines\1\25use_diagnostic_signs\1\nicons\1\14fold_open\6v\nsetup\ftrouble\frequire\0", "config", "trouble.nvim")
 time([[Config for trouble.nvim]], false)
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]

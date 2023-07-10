@@ -8,6 +8,7 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
     -- dashboard
+    -- might delete
     use {
         'glepnir/dashboard-nvim',
         event = 'VimEnter',
@@ -38,6 +39,8 @@ return require('packer').startup(function(use)
     use('agude/vim-eldar')
     use('NLKNguyen/papercolor-theme')
     use { 'nyoom-engineering/oxocarbon.nvim' }
+    use('dracula/vim')
+
     use('RRethy/vim-illuminate')
     --[[
     use({
