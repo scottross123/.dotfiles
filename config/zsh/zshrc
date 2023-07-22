@@ -31,6 +31,9 @@ add_file "prompt"
 # plugins
 plug "zsh-users/zsh-autosuggestions"
 plug "zsh-users/zsh-syntax-highlighting"
+plug "agkozak/zsh-z"
+
+zstyle ':completion:*' menu select
 
 # FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -56,3 +59,17 @@ bindkey '^e' edit-command-line
 # pending_tasks
     
 #precmd () {print -Pn "\e]0;%~\a"}
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/sross/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/sross/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/sross/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/sross/google-cloud-sdk/completion.zsh.inc'; fi
+
+# source github token secret
+# TODO move this into function
+source $HOME/.gh_token
+
+# nvm
+#export NVM_DIR="$HOME/.nvm"
+#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+#[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"

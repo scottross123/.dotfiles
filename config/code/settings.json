@@ -1,5 +1,5 @@
 {
-	"workbench.colorTheme": "oxocarbon",
+	"workbench.colorTheme": "Dracula",
 	"telemetry.telemetryLevel": "off",
 	"vim.vimrc.enable": true,
 	"security.workspace.trust.untrustedFiles": "open",

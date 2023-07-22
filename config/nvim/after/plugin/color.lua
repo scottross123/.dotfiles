@@ -7,5 +7,5 @@ end
 
 -- colorMe();
 
-vim.cmd('colorscheme oxocarbon')
+vim.cmd('colorscheme dracula')
 

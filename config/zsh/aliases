@@ -43,6 +43,10 @@ alias gp="git pull"
 alias gfgp="git fetch && git pull"
 alias gpu="git push"
 alias grb="git rebase"
+alias gdf="git diff"
+alias gl="git log"
+alias gm="git merge"
+alias gdfs="git diff --compact-summary"
 
 # source
 alias s="source ~/.config/zsh/.zshrc" 
@@ -78,8 +82,14 @@ alias serve-dir="python3 -m http.server"
 alias logout="pkill -KILL -u $(whoami)"
 
 # linux pbcopy and pbpaste
+# TODO linux only alias
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
 
 # apt update
 alias aptup="sudo apt-get update && sudo apt-get update"
+# get firefox cli to work on macOS. i feel like there should be a better way to do this but whatever
+# alias firefox="/Applications/Firefox.app/Contents/MacOS/firefox"
+
+# local docs cli, TODO move into separate alias file
+alias lcli=/Users/sross/Developer/Bitbucket/documentation-portal/dist/apps/cli/bin/docs.js
