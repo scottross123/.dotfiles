@@ -31,6 +31,9 @@ add_file "prompt"
 # plugins
 plug "zsh-users/zsh-autosuggestions"
 plug "zsh-users/zsh-syntax-highlighting"
+plug "agkozak/zsh-z"
+
+zstyle ':completion:*' menu select
 
 # FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
