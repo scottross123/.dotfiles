@@ -85,5 +85,5 @@ theme.layout_floating               = icons_dir .. "/icons/layouts/floating.png"
 
 beautiful.init(theme)
 
-gears.wallpaper.maximized(wallpaper_dir .. "/wallpaper2.jpg", s)
+-- gears.wallpaper.maximized(wallpaper_dir .. "/wallpaper2.jpg", s)
 
