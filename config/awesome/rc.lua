@@ -4,7 +4,7 @@ pcall(require, "luarocks.loader")
 
 local beautiful = require("beautiful")
 
-require("secrets")
+-- require("secrets")
 require("theme")
 require("autorun")
 
