@@ -16,9 +16,11 @@ precmd() {
 zstyle ':vcs_info:git:*' formats '(%b)'
 	if [[ -n $vcs_info_msg_0_ ]]; then
 		psvar[1]="$vcs_info_msg_0_"
-        PROMPT='%n@%m:%~ %v %% '
+        PROMPT='%n@%m:%~ %v
+%% '
 	else
-        PROMPT='%n@%m:%~ %% '
+        PROMPT='%n@%m:%~
+%% '
 	fi
 }
 
