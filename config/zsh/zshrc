@@ -67,7 +67,7 @@ if [ -f '/Users/sross/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/sro
 
 # source github token secret
 # TODO move this into function
-source $HOME/.gh_token
+# source $HOME/.gh_token
 
 # nvm
 #export NVM_DIR="$HOME/.nvm"
