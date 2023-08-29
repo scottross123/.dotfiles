@@ -11,13 +11,11 @@ require("autorun")
 require("signals")
 
 
-local keys = require("keys")
 local rules = require("rules")
 local layouts = require("layouts")
 
 local awful = require("awful")
 require("awful.autofocus")
-local wibox = require("wibox")
 local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup")
 

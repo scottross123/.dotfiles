@@ -3,7 +3,7 @@
 run() {
   if ! pgrep -f "$1" ;
   then
-    "$@"&
+    exec "$@"&
   fi
 }
 
