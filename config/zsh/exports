@@ -3,6 +3,10 @@ path+=('/Users/sross/bin')
 path+=('/home/scott/.local/bin')
 path+=('/Users/sross/.local/bin')
 export PATH
-export DOCKER_HOST=unix:///run/user/1000/docker.sock
+
+# don't set DOCKER_HOST if on macOS
+if [[ $(uname -o) != "Darwin" ]]; then
+    export DOCKER_HOST=unix:///run/user/1000/docker.sock
+fi
 
 export XDG_CONFIG_HOME="$HOME/.config"
