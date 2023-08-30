@@ -71,5 +71,6 @@
 	"vsicons.dontShowNewVersionMessage": true,
 	"git.openRepositoryInParentFolders": "always",
 	"search.useIgnoreFiles": false,
-	"workbench.editor.untitled.hint": "hidden"
+	"workbench.editor.untitled.hint": "hidden",
+	"window.zoomLevel": 2
 }
