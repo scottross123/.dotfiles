@@ -1,0 +1,43 @@
+#!/bin/sh
+
+# script to link node and npm installed through nvm or some other version manager to /usr/bin/
+
+NODE_BIN=/usr/local/bin/node
+NPM_BIN=/usr/local/bin/npm
+
+# TODO add skip
+
+check_for_bin () {
+    BIN=$1
+	if [[ -f "$BIN" ]]; then
+		echo "A file already exists at $BIN!"
+		echo "Remove (1), abort (2), or backup (3)?"
+		select opt in Remove Abort Backup; do
+			case $opt in
+				Remove)
+					echo "Removing..."
+					sudo rm -rf $BIN
+					break;;
+				Abort)
+					echo "Aborting..."
+					exit 0
+					break;;
+				Backup)
+					date=$(date +"%m%d%y-%T")
+					sudo mv $BIN $BIN.$date-bak
+					break;;
+				*)
+					echo "$REPLY is not a valid option, pick 1-3";;
+			esac
+		done
+	fi
+}
+
+check_for_bin $NODE_BIN
+check_for_bin $NPM_BIN
+
+echo "Symlinking node..."
+sudo ln -s $(which node) $NODE_BIN
+
+echo "Symlinking npm.."
+sudo ln -s $(which npm) $NPM_BIN

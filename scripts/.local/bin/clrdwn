@@ -1,0 +1,32 @@
+#!/bin/sh
+
+# clear downloads folder
+    
+clear_dir () {
+  DIR_TO_CLEAR=$1
+
+  FILE_COUNT=$(find . -maxdepth 1 -type f -printf x | wc -c)
+  DIR_COUNT=$(find . -maxdepth 1 -type d -printf x | wc -c)
+  SUM=$(($FILE_COUNT + $DIR_COUNT))
+
+  if [[ $SUM == 0 ]]; then
+    echo "$DIR_TO_CLEAR is empty."
+    exit 0;
+  fi
+
+  if [[ -z $HOME ]]; then
+    echo "Error: HOME variable is not set, aborting"
+    exit 1;
+  fi
+  
+  rm -rf $HOME/$DIR_TO_CLEAR/*
+  echo "Cleared $SUM files and dirs from $DIR_TO_CLEAR"
+}
+
+if [[ -d $HOME/downloads ]]; then
+  clear_dir "downloads"
+fi
+
+if [[ -d $HOME/Downloads ]]; then
+  clear_dir "Downloads"
+fi
