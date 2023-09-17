@@ -3,3 +3,4 @@ filezilla
 .DS_Store
 secrets.lua
 .stfolder
+.sync*

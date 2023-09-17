@@ -2,8 +2,7 @@
 
 # TODO maybe check for different commits between remote and local
 
-## autoload vcs and colors
-# autoload -Uz vcs_info
+autoload vcs and colors
 autoload -U colors && colors
 
 # Load version control information
@@ -13,14 +12,16 @@ precmd() {
 	psvar=()
 	vcs_info
 
+  START="%F{green}%n@%m%{$reset_color%}:%~"
+
 zstyle ':vcs_info:git:*' formats '(%b)'
 	if [[ -n $vcs_info_msg_0_ ]]; then
 		psvar[1]="$vcs_info_msg_0_"
-        PROMPT='%n@%m:%~ %v
-%% '
+        PROMPT="$START %v
+%{$fg[yellow]%}%% "
 	else
-        PROMPT='%n@%m:%~
-%% '
+        PROMPT="$START
+%{$fg[yellow]%}%% "
 	fi
 }
 

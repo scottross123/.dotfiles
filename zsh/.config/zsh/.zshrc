@@ -16,8 +16,6 @@ autoload -Uz compinit
 compinit
 _comp_options+=(globdots)
 
-# source "$ZDOTDIR/functions.zsh"
-
 for file in $ZDOTDIR/functions/*; do
 	source $file;
 done

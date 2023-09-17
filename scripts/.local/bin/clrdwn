@@ -5,9 +5,15 @@
 clear_dir () {
   DIR_TO_CLEAR=$1
 
-  FILE_COUNT=$(find . -maxdepth 1 -type f -printf x | wc -c)
-  DIR_COUNT=$(find . -maxdepth 1 -type d -printf x | wc -c)
-  SUM=$(($FILE_COUNT + $DIR_COUNT))
+  # maybe this isn't needed?
+  SKIP_FILES=(".DS_STORE")
+
+  FILE_COUNT=$(find $HOME/$DIR_TO_CLEAR  -maxdepth 1 -type f -printf x | wc -c)
+
+  DIR_COUNT=$(find $HOME/$DIR_TO_CLEAR -maxdepth 1 -type d -printf x | wc -c)
+
+  # subtract 1 because DIR_COUNT includes the parent directory
+  SUM=$(($FILE_COUNT + $DIR_COUNT - 1))
 
   if [[ $SUM == 0 ]]; then
     echo "$DIR_TO_CLEAR is empty."
@@ -20,7 +26,7 @@ clear_dir () {
   fi
   
   rm -rf $HOME/$DIR_TO_CLEAR/*
-  echo "Cleared $SUM files and dirs from $DIR_TO_CLEAR"
+  echo "Cleared $SUM item(s) from $DIR_TO_CLEAR."
 }
 
 if [[ -d $HOME/downloads ]]; then

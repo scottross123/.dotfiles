@@ -2305,9 +2305,3 @@ map kitty_mod+f5 load_config_file
 #: }}}
 # vim:ft=conf
 include dracula.conf
-
-
-# BEGIN_KITTY_THEME
-# 3024 Night
-include current-theme.conf
-# END_KITTY_THEME

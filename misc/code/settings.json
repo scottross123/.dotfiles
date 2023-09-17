@@ -1,5 +1,5 @@
 {
-	"workbench.colorTheme": "Dracula",
+	"workbench.colorTheme": "Firefox Dark",
 	"telemetry.telemetryLevel": "off",
 	"vim.vimrc.enable": true,
 	"security.workspace.trust.untrustedFiles": "open",
@@ -65,6 +65,10 @@
 		{
 			"sha256": "aec58bc0de12ad8f188575bb025afba9528bf85051198215a4e27e66c1ea326b",
 			"allowed": true
+		},
+		{
+			"sha256": "4636b288f1524a0f59a63512499ecf74eeec28933f6f602c5789314f514702d2",
+			"allowed": true
 		}
 	],
 	"editor.tabSize": 2,
@@ -72,5 +76,5 @@
 	"git.openRepositoryInParentFolders": "always",
 	"search.useIgnoreFiles": false,
 	"workbench.editor.untitled.hint": "hidden",
-	"window.zoomLevel": 2
+	"window.zoomLevel": 3
 }

@@ -1,5 +1,3 @@
-export XDG_CONFIG_HOME="$HOME/.config"
-
 # ssh agent
 
 env=~/.ssh/agent.env
@@ -27,7 +25,8 @@ unset env
 # not sure if i need to separate these or if it'll be fine
 
 # source key bindings
-source ~/.Xmodmap
+# TODO should only source this file on linux
+#source ~/.Xmodmap
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
 # Add Visual Studio Code (code)
