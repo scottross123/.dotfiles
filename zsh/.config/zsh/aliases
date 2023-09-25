@@ -45,6 +45,8 @@ alias gdf="git diff"
 alias gl="git log"
 alias gm="git merge"
 alias gdfs="git diff --compact-summary"
+alias gsh="git show"
+alias gch="git cherry-pick"
 
 # source
 alias s="source ~/.config/zsh/.zshrc" 
@@ -89,4 +91,4 @@ alias aptup="sudo apt-get update && sudo apt-get update"
 # alias firefox="/Applications/Firefox.app/Contents/MacOS/firefox"
 
 # local docs cli, TODO move into separate alias file
-alias lcli=/Users/sross/Developer/documentation-portal/dist/apps/cli/bin/docs.js
+alias lcli=/Users/sross/Developer/documentation-portal/dist/apps/cli/docs.js

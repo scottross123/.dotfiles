@@ -14,15 +14,19 @@ precmd() {
 
   START="%F{green}%n@%m%{$reset_color%}:%~"
 
-zstyle ':vcs_info:git:*' formats '(%b)'
+  zstyle ':vcs_info:git:*' formats '(%b)'
 	if [[ -n $vcs_info_msg_0_ ]]; then
-		psvar[1]="$vcs_info_msg_0_"
-        PROMPT="$START %v
+    psvar[1]="$vcs_info_msg_0_"
+    PROMPT="$START %v
 %{$fg[yellow]%}%% "
 	else
-        PROMPT="$START
+    PROMPT="$START
 %{$fg[yellow]%}%% "
 	fi
+
+  #RIGHT="$(date) "
+  #RIGHTWIDTH="$(($COLUMNS-${#LEFT}))"
+  #print $PROMPT${(l:$RIGHTWIDTH::.:)RIGHT}
 }
 
 zstyle ':vcs_info:git:*' formats '(%b)'

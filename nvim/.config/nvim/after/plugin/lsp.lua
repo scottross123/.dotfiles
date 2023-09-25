@@ -8,7 +8,7 @@ lsp.ensure_installed({
   'tsserver',
   'eslint',
   'html',
-  'bashls'
+  'bashls',
 })
 
 local cmp = require('cmp')

@@ -4,3 +4,6 @@ filezilla
 secrets.lua
 .stfolder
 .sync*
+.zsh_history
+.zcompdump*
+.zsh_session*
