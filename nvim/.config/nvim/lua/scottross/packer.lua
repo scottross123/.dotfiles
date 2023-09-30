@@ -7,6 +7,8 @@ return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
 
+    -- TODO add debugger and other vscode preview thing
+
     -- dashboard
     use {
         'glepnir/dashboard-nvim',
@@ -30,15 +32,11 @@ return require('packer').startup(function(use)
 
     -- themes
     use('drewtempelmeyer/palenight.vim')
-    use('junegunn/seoul256.vim')
-    -- use('metalelf0/base16-black-metal-scheme')
-    -- use('liuchengxu/space-vim-dark')
-    -- use('andreasvc/vim-256noir')
-    use('dikiaap/minimalist')
     use('agude/vim-eldar')
     use('NLKNguyen/papercolor-theme')
     use { 'nyoom-engineering/oxocarbon.nvim' }
     use('RRethy/vim-illuminate')
+
     use({
         'rrethy/vim-hexokinase',
         run = 'cd ~/.local/share/nvim/site/pack/packer/start/vim-hexokinase && make hexokinase'
@@ -56,7 +54,6 @@ return require('packer').startup(function(use)
     }
 
     use('nvim-treesitter/playground')
-    use('theprimeagen/harpoon')
     use('mbbill/undotree')
     use('tpope/vim-fugitive')
 
@@ -83,6 +80,7 @@ return require('packer').startup(function(use)
     }
     use('jose-elias-alvarez/null-ls.nvim')
 
+    -- probably delete this
     use {
         "folke/trouble.nvim",
         requires = "kyazdani42/nvim-web-devicons",
@@ -108,14 +106,6 @@ return require('packer').startup(function(use)
     use('vim-airline/vim-airline-themes')
 
     -- markdown writting
-    use('junegunn/goyo.vim')
-    use('junegunn/limelight.vim')
-    use({
-        "iamcco/markdown-preview.nvim",
-        run = "cd app && npm install",
-        setup = function() vim.g.mkdp_filetypes = { "markdown" } end,
-        ft = { "markdown" },
-    })
     use('godlygeek/tabular')
     use('preservim/vim-markdown')
 
@@ -125,6 +115,4 @@ return require('packer').startup(function(use)
         requires = 'antoinemadec/FixCursorHold.nvim',
     }
 
-    -- barbarbarbar
-    -- use { 'romgrk/barbar.nvim', requires = 'nvim-web-devicons' }
 end)
