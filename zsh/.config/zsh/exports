@@ -5,8 +5,13 @@ path+=('/Users/sross/.local/bin')
 export PATH
 
 # don't set DOCKER_HOST if on macOS
-if [[ $(uname -o) != "Darwin" ]]; then
-    export DOCKER_HOST=unix:///run/user/1000/docker.sock
+#if [[ $(uname -o) != "Darwin" ]]; then
+#    export DOCKER_HOST=unix:///run/user/1000/docker.sock
+#fi
+
+# set jdk 1.8 on macOS
+if [[ $(uname -o) == "Darwin" ]]; then
+    export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 fi
 
 export XDG_CONFIG_HOME="$HOME/.config"
