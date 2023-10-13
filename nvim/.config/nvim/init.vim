@@ -1,2 +1,2 @@
 source $HOME/.vimrc
-source config.lua
+sil! source config.lua

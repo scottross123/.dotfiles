@@ -47,6 +47,7 @@ alias gm="git merge"
 alias gdfs="git diff --compact-summary"
 alias gsh="git show"
 alias gch="git cherry-pick"
+alias grt="git remote"
 
 # source
 alias s="source ~/.config/zsh/.zshrc" 

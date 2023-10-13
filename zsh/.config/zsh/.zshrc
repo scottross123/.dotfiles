@@ -47,15 +47,6 @@ bindkey '^e' edit-command-line
 # vscode
 [[ "$TERM_PROGRAM" == "vscode" ]] && . "$(code --locate-shell-integration-path zsh)"
 
-# nvm
-# NOTE nvim takes a really fucking long time to load and slows down zsh
-# TODO fix this, lazy load it or something
-#export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-
-# TODO enable this once i get to not show up when i have 0 tasks
-# pending_tasks
-    
 #precmd () {print -Pn "\e]0;%~\a"}
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/sross/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/sross/google-cloud-sdk/path.zsh.inc'; fi
@@ -67,7 +58,7 @@ if [ -f '/Users/sross/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/sro
 # TODO move this into function
 # source $HOME/.gh_token
 
-# nvm
-#export NVM_DIR="$HOME/.nvm"
-#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-#[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+[[ "$(uname)" != "Darwin" ]] && $HOME/.local/bin/cow-fortune
+
+
+[ -f "/home/scott/.ghcup/env" ] && source "/home/scott/.ghcup/env" # ghcup-env

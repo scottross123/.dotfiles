@@ -4,7 +4,7 @@ let mapleader = " "
 " netrw settings
 let g:netrw_banner=0
 let g:netrw_liststyle=3
-let g:netrw_browse_split=3
+let g:netrw_browse_split=0
 let g:netrw_altv=1
 let g:netrw_winsize=30
 let g:netrw_keepdir=0
@@ -107,3 +107,16 @@ nnoremap <slient> <leader>x :!chmod +x %<CR>
 
 " change word on enter 
 nnoremap <cr> ciw
+
+" _ is a keyword
+set iskeyword-=_
+
+" save file on ZS
+nnoremap ZS :w<CR>
+
+" shift-tab undoes tab
+" maybe remove this? so i don't forget how to use the built in untabbing
+" for command mode
+nnoremap <S-Tab> <<
+" for insert mode
+inoremap <S-Tab> <C-d>

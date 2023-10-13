@@ -1,6 +1,11 @@
 local lsp = require('lsp-zero')
 
 require("luasnip.loaders.from_vscode").lazy_load()
+require("lsp_lines").setup()
+
+vim.diagnostic.config({
+  virtual_text = false,
+})
 
 lsp.preset('recommended')
 
@@ -52,5 +57,5 @@ lsp.on_attach(function(client, bufnr)
   vim.keymap.set("i", "<C-h>", vim.lsp.buf.signature_help, opts)
 end)
 
-lsp.setup()
 
+lsp.setup()

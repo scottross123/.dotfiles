@@ -8,28 +8,6 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
     -- TODO add debugger and other vscode preview thing
-
-    -- dashboard
-    use {
-        'glepnir/dashboard-nvim',
-        event = 'VimEnter',
-        config = function()
-            require('dashboard').setup {
-                theme = 'hyper',
-                config = {
-                    -- header = { "bruh" }
-                },
-                preview = {
-                    command, -- preview command
-                    file_path, -- preview file path
-                    file_height, -- preview file height
-                    file_width, -- preview file width
-                },
-            }
-        end,
-        requires = { 'nvim-tree/nvim-web-devicons' }
-    }
-
     -- themes
     use('drewtempelmeyer/palenight.vim')
     use('agude/vim-eldar')
@@ -78,7 +56,16 @@ return require('packer').startup(function(use)
             { 'rafamadriz/friendly-snippets' },
         }
     }
-    use('jose-elias-alvarez/null-ls.nvim')
+
+    -- this is deprecated, switch it out later
+    -- use('jose-elias-alvarez/null-ls.nvim')
+
+    use({
+      "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
+      config = function()
+        require("lsp_lines").setup()
+      end,
+    })
 
     -- probably delete this
     use {

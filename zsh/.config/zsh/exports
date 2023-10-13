@@ -12,6 +12,8 @@ export PATH
 # set jdk 1.8 on macOS
 if [[ $(uname -o) == "Darwin" ]]; then
     export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+    export LIBVIRT_DEFAULT_URI='qemu:///system'
 fi
 
 export XDG_CONFIG_HOME="$HOME/.config"
+

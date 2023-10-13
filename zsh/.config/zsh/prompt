@@ -12,7 +12,7 @@ precmd() {
 	psvar=()
 	vcs_info
 
-  START="%F{green}%n@%m%{$reset_color%}:%~"
+  START="[%T] %n@%m:%~"
 
   zstyle ':vcs_info:git:*' formats '(%b)'
 	if [[ -n $vcs_info_msg_0_ ]]; then

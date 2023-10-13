@@ -1,0 +1,9 @@
+#!/bin/sh
+
+if [ $(uname) = "Darwin" ]; then
+  COWS_DIR=/opt/homebrew/share/cows/
+else
+  COWS_DIR=/usr/share/cows/
+fi
+
+fortune | cowsay -f $(find $COWS_DIR -type f | shuf -n 1)
