@@ -17,3 +17,4 @@ fi
 
 export XDG_CONFIG_HOME="$HOME/.config"
 
+export LIBVIRT_DEFAULT_URI='qemu:///system'
