@@ -18,10 +18,10 @@ precmd() {
 	if [[ -n $vcs_info_msg_0_ ]]; then
     psvar[1]="$vcs_info_msg_0_"
     PROMPT="$START %v
-%{$fg[yellow]%}%% "
+%% "
 	else
     PROMPT="$START
-%{$fg[yellow]%}%% "
+%% "
 	fi
 
   #RIGHT="$(date) "
